@@ -1,0 +1,43 @@
+body {
+    font-family: "Noto Sans";
+}
+
+.blue {
+    background-color: #579FFE;
+    color: white;
+}
+
+.dark-blue {
+    background-color: #2950A7;
+    color: white;
+}
+
+.blue-text {
+    background-color: white;
+    color: #579FFE;
+}
+
+.important {
+    font-weight: bold;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block {
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+}
+
+h1 {
+    font-weight: bold;
+    margin-left: 5%;
+    text-shadow: 2px 2px 5px lightgray;
+}
