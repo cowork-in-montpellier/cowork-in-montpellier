@@ -18,8 +18,8 @@ aux collaborateurs
 ### Branches
 
 Le dépôt a deux branches :
-*   *master*: Celle qui contient ce readme
-*   *gh-pages*: Celle qui contient les pages html
+*   *master*: Celle qui contient les pages html en cours de dev
+*   *gh-pages*: Celle qui contient les pages html en production
 
 Pour modifier et pusher le contenu de gh-pages
 
