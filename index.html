@@ -46,9 +46,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    <script id="leaflet-script" src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
             integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-            crossorigin=""></script>
+            crossorigin="" async defer></script>
 
     <script type="application/ld+json">
         {
@@ -270,26 +270,35 @@
     </footer>
 
     <script>
-        let latlng = [43.610047, 3.867752];
-        var map = L.map('map', {
-            closePopupOnClick: false,
-            scrollWheelZoom: false,
-        }).setView(latlng, 17);
+        function initMap() {
+            let latlng = [43.610047, 3.867752];
+            var map = L.map('map', {
+                closePopupOnClick: false,
+                scrollWheelZoom: false,
+            }).setView(latlng, 17);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            minZoom: 13,
-            maxZoom: 18,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                minZoom: 13,
+                maxZoom: 18,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        L.marker(latlng).addTo(map)
-            .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte",
-                {
-                    closeButton: false,
-                    autoClose: false,
-                    closeOnEscapeKey: false
-                })
-            .openPopup();
+            L.marker(latlng).addTo(map)
+                .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte",
+                    {
+                        closeButton: false,
+                        autoClose: false,
+                        closeOnEscapeKey: false
+                    })
+                .openPopup();
+        }
+
+        if (typeof L !== "undefined") {
+            initMap();
+        } else {
+            var el = window.document.getElementById("leaflet-script")
+            el.onload = initMap;
+        }
     </script>
 </body>
 </html>
