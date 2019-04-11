@@ -26,7 +26,7 @@ body {
     margin-right: auto;
 }
 
-.block {
+.width-constraint {
     width: 90%;
     max-width: 900px;
     margin-left: auto;
