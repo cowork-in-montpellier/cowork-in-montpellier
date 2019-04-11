@@ -54,3 +54,7 @@ h1, h2 {
 a.discreet {
     text-decoration: none;
 }
+
+.gallery > * > * > * > img {
+    max-width: 90%;
+}

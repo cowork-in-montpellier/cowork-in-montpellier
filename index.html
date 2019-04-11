@@ -50,6 +50,10 @@
             integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
             crossorigin="" async defer></script>
 
+    <!-- Highslide -->
+    <script id="highslide-script" type="text/javascript" src="resources/3rd-party/highslide/highslide-full.min.js" async defer></script>
+    <link rel="stylesheet" type="text/css" href="resources/3rd-party/highslide/highslide.css" />
+
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -279,6 +283,68 @@
                     <a href="https://www.instagram.com/coworkinmtp/" class="discreet w3-margin" title="Instagram"><i class="fab fa-instagram w3-jumbo w3-btn"></i></a>
                 </div>
             </div>
+
+
+            <div class="gallery">
+                <div class="w3-row w3-margin">
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo001.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo001.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Nos salles de travail peuvent accueillir environ 1 à 6 personnes. Il suffit de venir et de t'y installer
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo002.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo002.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Du matériel comme des écrans et clavier/souris d'ordinateur sont à la disposition des coworkers
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo003.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo003.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Bien que chacun a son propre travail, nous favorisons les échanges entre les coworkers
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-margin">
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo004.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo004.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            La pause café/thé et repas du midi est aussi l'occasion de faire connaissance et de partager un moment agréable
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo006.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo006.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                           Notre téléviseur peut être utilisé pour des présentations, ou simplement pour se divertir à l'occasion
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo005.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo005.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Nous disposons d'une salle de détente. Chez nous, chaque coworker est libre de s'installer où il le souhaite pour travailler
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -340,5 +406,65 @@
             el.onload = initMap;
         }
     </script>
+
+
+    <script>
+        function initHighslide() {
+            hs.graphicsDir = 'resources/3rd-party/highslide/graphics/';
+            hs.align = 'center';
+            hs.transitions = ['expand', 'crossfade'];
+            hs.outlineType = 'rounded-white';
+            hs.fadeInOut = true;
+            hs.numberPosition = 'caption';
+            hs.dimmingOpacity = 0.75;
+            hs.showCredits = false;
+            hs.lang =  {
+                cssDirection: 'ltr',
+                loadingText: 'Chargement...',
+                loadingTitle: 'Clic pour annuler',
+                focusTitle: 'Clic pour mettre en premier plan',
+                fullExpandTitle: 'Agrandir à la taille actuelle (f)',
+                creditsText: 'Par <i>Highslide JS</i>',
+                creditsTitle: 'Voir le site de Highslide JS',
+                previousText: 'Précédent',
+                nextText: 'Suivant',
+                moveText: 'Déplacer',
+                closeText: 'Fermer',
+                closeTitle: 'Fermer (esc)',
+                resizeTitle: 'Réduire/Agrandir',
+                playText: 'Jouer',
+                playTitle: 'Jouer le diaporama (espace)',
+                pauseText: 'Pause',
+                pauseTitle: 'Mettre en pause le diaporama (espace)',
+                previousTitle: 'Précédent (flèche gauche)',
+                nextTitle: 'Suivant (flèche droite)',
+                moveTitle: 'Déplacer',
+                fullExpandText: '1:1',
+                number: 'Image %1 sur %2',
+                restoreTitle: 'Clic pour fermer, click & drag pour déplacer. Flèches gauche/droite pour suivant et précédent.'
+            };
+
+            // Add the controlbar
+            if (hs.addSlideshow) hs.addSlideshow({
+                interval: 5000,
+                repeat: false,
+                useControls: true,
+                fixedControls: 'fit',
+                overlayOptions: {
+                    opacity: .75,
+                    position: 'bottom center',
+                    hideOnMouseOut: true
+                }
+            });
+        }
+
+        if ( typeof hs !== 'undefined' ) {
+            initHighslide();
+        } else {
+            var el = window.document.getElementById("highslide-script")
+            el.onload = initHighslide;
+        }
+    </script>
+
 </body>
 </html>
