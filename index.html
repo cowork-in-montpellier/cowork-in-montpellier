@@ -26,6 +26,7 @@
     <meta property="og:image" content="https://coworkinmontpellier.org/favicon/android-chrome-512x512.png" />
     <meta property="og:site_name" content="Cowork'in Montpellier" />
 
+    <!-- favivons -->
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
     <!--
@@ -37,10 +38,19 @@
     <meta name="msapplication-config" content="resources/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="resources/stylesheets/main.css" />
+
+    <!-- leafleat -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
 
     <script type="application/ld+json">
         {
@@ -215,8 +225,26 @@
         </div>
     </main>
 
-    <footer class="w3-margin-top w3-margin-bottom">
+    <h1 class="w3-hide">Carte</h1>
+    <div id="map" class="w3-margin-top w3-margin-bottom"></div>
+
+    <footer class="w3-margin-top">
 
     </footer>
+
+    <script>
+        let latlng = [43.610047, 3.867752];
+        var map = L.map('map').setView(latlng, 17);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            minZoom: 13,
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker(latlng).addTo(map)
+            .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte")
+            .openPopup();
+    </script>
 </body>
 </html>
