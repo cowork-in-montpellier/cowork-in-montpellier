@@ -29,9 +29,7 @@
     <!-- favivons -->
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-    <!--
     <link rel="manifest" href="resources/favicon/site.webmanifest">
-    -->
     <link rel="mask-icon" href="resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="resources/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -234,7 +232,10 @@
 
     <script>
         let latlng = [43.610047, 3.867752];
-        var map = L.map('map').setView(latlng, 17);
+        var map = L.map('map', {
+            closePopupOnClick: false,
+            scrollWheelZoom: false,
+        }).setView(latlng, 17);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             minZoom: 13,
@@ -243,7 +244,12 @@
         }).addTo(map);
 
         L.marker(latlng).addTo(map)
-            .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte")
+            .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte",
+                {
+                    closeButton: false,
+                    autoClose: false,
+                    closeOnEscapeKey: false
+                })
             .openPopup();
     </script>
 </body>
