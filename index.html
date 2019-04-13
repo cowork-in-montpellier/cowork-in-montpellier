@@ -29,7 +29,7 @@
     <!-- favivons -->
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-    <link rel="manifest" href="resources/favicon/site.webmanifest">
+
     <link rel="mask-icon" href="resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="resources/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -186,7 +186,7 @@
 
             <h2 id="services" class="w3-animate-opacity">Nos services</h2>
             <div class="w3-container w3-center w3-animate-right">
-                <img src="resources/img/illustration_02.png" alt="Illustration des services" style="max-width: 100%">
+                <img src="resources/img/illustration_02.png" alt="Illustration des services: Accès internet, Wifi, Café / Thé, Imprimante, etc." style="max-width: 100%">
                 <ul class="w3-hide">
                     <li>Imprimante</li>
                     <li>Accès internet WIFI avec connexion fibre</li>
@@ -208,7 +208,7 @@
                     <div class="w3-col l4 m4 s12 w3-padding">
                         <h3 class="blue-text">Services</h3>
                         <p>
-                            L'accès internet via Wifi, l'imprimante, le café/thé... tout est inclus dans nos offres. Vous pouvez amener votre casse-croute pour le midi, le mettre dans le réfrigérateur et le réchauffer au micro-ondes.
+                            L'accès internet via Wifi, l'imprimante, le café/thé… tout est inclus dans nos offres. Vous pouvez amener votre casse-croute pour le midi, le mettre dans le réfrigérateur et le réchauffer au micro-ondes.
                         </p>
                     </div>
                     <div class="w3-col l4 m4 s12 w3-padding">
@@ -222,7 +222,7 @@
                     <div class="w3-col l12 m12 s12 w3-padding">
                         <h3 class="blue-text">Cowork'in Montpellier, c'est quoi ?</h3>
                         <p>
-                            Cowork'in Montpellier est une association loi 1901 à but non lucratif. C'est un espace de coworking et de travail partagé qui rassemble un réseau de travailleurs. L'objectif est de permettre aux travailleurs de sortir de leur isolement, d'être dans un réseau ouvert et qui multiplie les échanges. Contrairement à un bureau, les places ne sont pas reservées, il n'y a pas d'engagement sur un bail ni de préavis. Le coworking est particulièrement adapté pour des indépendants, des télé-travailleurs, ... Et tout cela dans la bonne humeur !
+                            Cowork'in Montpellier est une association loi 1901 à but non lucratif. C'est un espace de coworking et de travail partagé qui rassemble un réseau de travailleurs. L'objectif est de permettre aux travailleurs de sortir de leur isolement, d'être dans un réseau ouvert et qui multiplie les échanges. Contrairement à un bureau, les places ne sont pas reservées, il n'y a pas d'engagement sur un bail ni de préavis. Le coworking est particulièrement adapté pour des indépendants, des télé-travailleurs, … Et tout cela dans la bonne humeur !
                         </p>
                     </div>
                 </div>
@@ -241,6 +241,7 @@
                     <div class="w3-row w3-section">
                         <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
                         <div class="w3-rest">
+                            <label class="w3-hide" for="input_1">Nom</label>
                             <input type="text" class="w3-input w3-border" id="input_1" name="q1_nom" size="20" placeholder="Ton nom" required />
                         </div>
                     </div>
@@ -248,6 +249,7 @@
                     <div class="w3-row w3-section">
                         <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope"></i></div>
                         <div class="w3-rest">
+                            <label class="w3-hide" for="input_2">Email</label>
                             <input type="email" class="w3-input w3-border" id="input_2" name="q4_email4" size="50" placeholder="Ton email" required />
                         </div>
                     </div>
@@ -255,6 +257,7 @@
                     <div class="w3-row w3-section">
                         <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pen"></i></div>
                         <div class="w3-rest">
+                            <label class="w3-hide" for="input_3">Message</label>
                             <textarea id="input_3" class="w3-input w3-border" name="q5_message5" cols="40" rows="6" required></textarea>
                         </div>
                     </div>
@@ -420,7 +423,7 @@
             hs.showCredits = false;
             hs.lang =  {
                 cssDirection: 'ltr',
-                loadingText: 'Chargement...',
+                loadingText: 'Chargement…',
                 loadingTitle: 'Clic pour annuler',
                 focusTitle: 'Clic pour mettre en premier plan',
                 fullExpandTitle: 'Agrandir à la taille actuelle (f)',
