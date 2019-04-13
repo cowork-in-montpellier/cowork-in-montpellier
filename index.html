@@ -1,185 +1,473 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cowork'in Montpellier - Espace de Coworking</title>
-        <link rel="icon" href="img/favicon.ico" />
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="stylesheets/colorbox.css">
-        <link rel="stylesheet" href="stylesheets/screen.css">
-    </head>
-    <body>
-        <header>
-            <div class="wrapper">
-                <nav>
-                    <ul>
-                        <li><a href="/">Coworkers</a></li>
-                        <li><a href="/espace.html">L'espace</a></li>
-                        <li class="last"><a href="/asso.html">L'asso</a></li>
-                        <li class="last">
-                            <h1><a href="/"><img src="img/logo.png" alt="Cowork'in Montpellier"></a></h1>
-                        </li>
-                        <li><a href="/wall-of-vous.html">Wall of vous</a></li>
-                        <li><a href="/presse.html">Presse</a></li>
-                        <li class="last"><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://coworkinmontpellier.org/" />
 
+    <title>Cowork'in Montpellier - Espace de Coworking</title>
+    <meta name="description" content="Espace de coworking situé à Montpellier où reigne la bonne ambiance à prix mini ! Nous vous y accueillerons pour travailler avec plaisir et bonne humeur" />
+    <meta name="keywords" content="coworking,montpellier,espace,bureau,travail,freelance,location" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cowork_in_mtp">
+    <meta name="twitter:title" content="Cowork'in Montpellier – Espace de coworking">
+    <meta name="twitter:description" content="L'espace de coworking de Montpellier où reigne la bonne ambiance à prix mini !">
+    <meta name="twitter:creator" content="@cowork_in_mtp">
+    <meta name="twitter:image" content="https://coworkinmontpellier.org/favicon/android-chrome-512x512.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Cowork'in Montpellier – Espace de coworking" />
+    <meta property="og:description" content="L'espace de coworking de Montpellier où reigne la bonne ambiance à prix mini !" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coworkinmontpellier.org" />
+    <meta property="og:image" content="https://coworkinmontpellier.org/favicon/android-chrome-512x512.png" />
+    <meta property="og:site_name" content="Cowork'in Montpellier" />
+
+    <!-- favivons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+
+    <link rel="mask-icon" href="resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="resources/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="resources/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/stylesheets/w3.css">
+    <link rel="stylesheet" href="resources/stylesheets/main.css" />
+
+    <!-- leafleat -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script id="leaflet-script" src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin="" async defer></script>
+
+    <!-- Highslide -->
+    <script id="highslide-script" type="text/javascript" src="resources/3rd-party/highslide/highslide-full.min.js" async defer></script>
+    <link rel="stylesheet" type="text/css" href="resources/3rd-party/highslide/highslide.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Cowork'in Montpellier",
+            "url": "https://coworkinmontpellier.org/",
+            "logo": "https://coworkinmontpellier.org/favicon/android-chrome-512x512.png",
+            "email": "contact@coworkinmontpellier.org",
+            "contactPoint": [
+                {
+                    "@type": "PostalAddress",
+                    "availableLanguage": [
+                        "French",
+                        "English"
+                    ],
+                    "email": "contact@coworkinmontpellier.org",
+                    "streetAddress": "4 Rue Auguste Comte",
+                    "postalCode": "34000",
+                    "addressLocality": "Montpellier",
+                    "addressCountry": "FR"
+                }
+            ],
+            "location": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "4 Rue Auguste Comte",
+                    "postalCode": "34000",
+                    "addressLocality": "Montpellier",
+                    "addressCountry": "FR"
+                }
+            ],
+            "sameAs": [
+                "https://twitter.com/cowork_in_mtp",
+                "https://www.facebook.com/CoworkInMontpellier/",
+                "https://www.instagram.com/coworkinmtp/"
+            ]
+        }
+    </script>
+</head>
+<body>
+    <header class="w3-padding">
+        <div class="width-constraint">
+           <img src="resources/img/logo.png" alt="Logo Cowork'in Montpellier" style="max-width: 95%; width: 300px;" />
+        </div>
+    </header>
+    <main>
+        <h1 class="w3-hide">L'espace de Coworking de Montpellier</h1>
+        <div class="width-constraint">
+            <div class="w3-container w3-center w3-animate-left">
+                <img src="resources/img/illustration_01.png" alt="Illustration Cowork'in Montpellier" style="max-width: 100%">
             </div>
-        </header>
-        <!-- Commentaires Espérance
-<section class="wrapper">
-<div class="intro clearfix">
-<div class="w60 fl">
-<h2>Le calendrier des événements</h2>
-<iframe
-src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=team%40coworkinmontpellier.org&amp;color=%23875509&amp;ctz=Europe%2FParis"
-style=" border-width:0 "
-width="550"
-height="300"
-frameborder="0"
-scrolling="no"
-></iframe>
-<p>Les coworkers ont fait un putsch pour avoir un lamacorne ici !</p>
-<img src="img/lamacorne.png" alt="Lamacorne" height="200px">
-</div>
-<div class="w40 fl aligncenter">
-<div class="follow w90 fr">
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://widget.mailjet.com/7ed361d9b6d3a7c00a6acb91ecc3150138f68a36.html" width="auto" height="auto"></iframe>
-<div class="rsalc">
 
-</div>
-</div>
-</div>
-</div>
-</section>
--->
-        <section class="wrapper">
-            <article id="tarifs">
-                <h2>Tarifs coworking</h2>
-                <div class="table">
-                    <div class="price">
-                        <h3>La journée</h3>
-                        <ul>
-                            <li>Accès une journée</li>
-                            <li>Café / Thé</li>
-                            <li>Wifi</li>
-                            <li>Imprimante</li>
-				<li></li>
-                            <li class="amount">15€ / jour</li>
-                            <li><a href="#inscription" class="btn">S'inscrire</a></li>
-                        </ul>
+            <h2 id="tarifs" class="w3-animate-opacity">Nos tarifs</h2>
+            <div class="w3-center w3-margin-top w3-animate-opacity width-constraint">
+                <div class="blue-text w3-xlarge w3-margin-bottom important">Ton besoin est</div>
+                <div class="w3-padding w3-margin w3-xlarge blue">Régulier</div>
+                <div class="w3-card-4 w3-border w3-margin w3-row-padding w3-padding">
+                    <div class="w3-col l3 m6 s12 w3-padding w3-large">
+                        <div class="w3-margin-top w3-margin-bottom">
+                            <div class="w3-padding blue">Un peu</div>
+                            <div class="w3-padding w3-margin-top w3-border w3-border-black">10 x 9h<br />130 €*</div>
+                        </div>
                     </div>
-                    <div class="price">
-                        <h3>10 jours</h3>
-                        <ul>
-                            <li>10 accès journée (valable 1 an)</li>
-                            <li>Café / Thé</li>
-                            <li>Wifi</li>
-                            <li>Imprimante</li>
-                            <li class="amount">130€</li>
-                            <li><a href="#inscription" class="btn">S'inscrire</a></li>
-                        </ul>
+                    <div class="w3-col l3 m6 s12 w3-padding w3-large">
+                        <div class="w3-margin-top w3-margin-bottom">
+                            <div class="w3-padding blue">Beaucoup</div>
+                            <div class="w3-padding w3-margin-top w3-border w3-border-black">10 j/mois<br />110 €**</div>
+                        </div>
                     </div>
-                    <div class="price">
-                        <h3>Mid time</h3>
-                        <ul>
-                            <li>Accès 10 jours / mois</li>
-                            <li>Café / Thé</li>
-                            <li>Wifi</li>
-                            <li>Imprimante</li>
-				<li></li>
-                            <li class="amount">110€ / mois</li>
-                            <li><a href="#inscription" class="btn">S'inscrire</a></li>
-                        </ul>
+                    <div class="w3-col l3 m6 s12 w3-padding w3-large">
+                        <div class="w3-margin-top w3-margin-bottom">
+                            <div class="w3-padding blue">Passionnément</div>
+                            <div class="w3-padding w3-margin-top w3-border w3-border-black">15 j/mois<br />150 €**</div>
+                        </div>
                     </div>
-                    <div class="price">
-                        <h3>Part time</h3>
-                        <ul>
-                            <li>Accès 15 jours / mois</li>
-                            <li>Café / Thé</li>
-                            <li>Wifi</li>
-                            <li>Imprimante</li>
-				<li></li>
-                            <li class="amount">150€ / mois</li>
-                            <li><a href="#inscription" class="btn">S'inscrire</a></li>
-                        </ul>
-                    </div>
-                    <div class="price">
-                        <h3>Full time</h3>
-                        <ul>
-                            <li>Accès illimité</li>
-                            <li>Café / Thé</li>
-                            <li>Wifi</li>
-                            <li>Imprimante</li>
-				<li></li>
-                            <li class="amount">190€ / mois</li>
-                            <li><a href="#inscription" class="btn">S'inscrire</a></li>
-                        </ul>
+                    <div class="w3-col l3 m6 s12 w3-padding w3-large">
+                        <div class="w3-margin-top w3-margin-bottom">
+                            <div class="w3-padding blue">À la folie</div>
+                            <div class="w3-padding w3-margin-top w3-border w3-border-black">Accès Illimité<br />190 €**
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="strong">La première journée est gratuite pour que tu puisses tester, n'hésite pas à venir sans réserver</p>
-            </article>
-		<article id="tarifs">
-		<h2>Location salle de réunion</h2>
-			<div class='table'>
-				<div class='price'>
-					<h3>Salle 3/5 pers.</h3>
-					<ul>
-						<li>Privatisation d'une petite salle</li>
-						<li>Wifi / Bureaux / Paperboard</li>
-						<li class='amount'>40€ / demi-journée</li>
-					</ul>
-				</div>
-				<div class='price'>
-					<h3>Salle 8/12 pers.</h3>
-					<ul>
-						<li>Privatisation d'une grande salle</li>
-						<li>Wifi / Bureaux / Paperboard / Grand écran HD</li>
-						<li class='amount'>50€ / demi-journée</li>
-					</ul>
-				</div>
-			</div>
-      <p>Vous pouvez louer une salle pour des durées plus longues. Pour toute réservation, <a href="/contact.html">écrivez-nous</a>.</p>
-      <p>Vous organisez des meetups et vous cherchez un espace pour votre groupe ? Nous vous accueillons les soirs. <a href="/contact.html">Présentez-nous</a> votre groupe et vos besoins.</p>
-            </article>
-            <article class="clearfix">
-                <div id="horaires" class="w30 fl">
-                    <h2>Horaires</h2>
-                    <p>L'espace est ouvert de 9h à 18h du lundi au vendredi. <br />Nous nous organisons entre coworkers pour gérer les clés, ce qui fait que les horaires s'adaptent à vos besoins.</p>
+                <div class="w3-row">
+                    <div class="w3-col l6 m6 s12">
+                        <div class="w3-padding w3-margin w3-xlarge blue">Ponctuel</div>
+                        <div class="w3-card-4 w3-border w3-margin w3-row-padding w3-padding">
+                            <div class="w3-col l6 m12 s12 w3-padding w3-large">
+                                <div class="w3-margin-top w3-margin-bottom">
+                                    <div class="w3-padding blue">½ journée</div>
+                                    <div class="w3-padding w3-margin-top w3-border w3-border-black">Accès 5h<br />8 €*</div>
+                                </div>
+                            </div>
+                            <div class="w3-col l6 m12 s12 w3-padding w3-large">
+                                <div class="w3-margin-top w3-margin-bottom">
+                                    <div class="w3-padding blue">1 journée</div>
+                                    <div class="w3-padding w3-margin-top w3-border w3-border-black">Accès 9h<br />15 €*
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-col l6 m6 s12">
+                        <div class="w3-padding w3-margin w3-xlarge dark-blue">Réunion / Formation</div>
+                        <div class="w3-card-4 w3-border w3-margin w3-row-padding w3-padding">
+                            <div class="w3-col l6 m12 s12 w3-padding w3-large">
+                                <div class="w3-margin-top w3-margin-bottom">
+                                    <div class="w3-padding dark-blue">3-6 pers.</div>
+                                    <div class="w3-padding w3-margin-top w3-border w3-border-black">½ journée<br />40 €*
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col l6 m12 s12 w3-padding w3-large">
+                                <div class="w3-margin-top w3-margin-bottom">
+                                    <div class="w3-padding dark-blue">6-9 pers.</div>
+                                    <div class="w3-padding w3-margin-top w3-border w3-border-black">½ journée<br />50 €*
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="services" class="w30 fl">
-                    <h2>Services</h2>
-                    <p>Les services sont décrits dans les tarifs. Vous pouvez amener votre casse-croute pour le midi, le mettre dans le réfrigérateur et le réchauffer au micro-ondes.</p>
+                <div class="width-constraint w3-margin-top w3-small w3-text-left">
+                    * Tarification sans perfidie : <strong>tous les services sont inclus !</strong>
+                    <br />
+                    ** Par mois. Toujours sans perfidie :)
                 </div>
-                <div id="fonctionnement" class="w30 fl">
-                    <h2>Fonctionnement</h2>
-                    <p>Nous pensons que <a href="https://twitter.com/search?q=%23lesgens"> #lesgens</a> sont responsables, capables de créer une société et que la confiance crée l'ambiance. C'est pour cela que vous pouvez demander les clés, vous faire un café dans des tasses, utiliser l'imprimante sans quota.</p>
+            </div>
+
+            <h2 id="services" class="w3-animate-opacity">Nos services</h2>
+            <div class="w3-container w3-center w3-animate-right">
+                <img src="resources/img/illustration_02.png" alt="Illustration des services: Accès internet, Wifi, Café / Thé, Imprimante, etc." style="max-width: 100%">
+                <ul class="w3-hide">
+                    <li>Imprimante</li>
+                    <li>Accès internet WIFI avec connexion fibre</li>
+                    <li>Café et Thé à disposition</li>
+                    <li>Salle de repos</li>
+                </ul>
+            </div>
+
+            <h2 id="information" class="w3-animate-opacity">L'Organisation</h2>
+            <div class="w3-container w3-center w3-animate-opacity">
+                <div class="w3-row-padding w3-justify">
+                    <div class="w3-col l4 m4 s12 w3-padding">
+                        <h3 class="blue-text">Horaires</h3>
+                        <p>
+                            L'espace de coworking est ouvert <strong>de 9h à 18h</strong> du lundi au vendredi.<br />
+                            Nous nous organisons entre coworkers pour gérer les clés, ce qui fait que les horaires s'adaptent à vos besoins.
+                        </p>
+                    </div>
+                    <div class="w3-col l4 m4 s12 w3-padding">
+                        <h3 class="blue-text">Services</h3>
+                        <p>
+                            L'accès internet via Wifi, l'imprimante, le café/thé… tout est inclus dans nos offres. Vous pouvez amener votre casse-croute pour le midi, le mettre dans le réfrigérateur et le réchauffer au micro-ondes.
+                        </p>
+                    </div>
+                    <div class="w3-col l4 m4 s12 w3-padding">
+                        <h3 class="blue-text">Fonctionnement</h3>
+                        <p>
+                            Nous pensons que #lesgens sont responsables et que la confiance crée l'ambiance. C'est pour cela que vous pouvez demander les clés, vous faire un café dans des tasses, utiliser l'imprimante. L'espace est à vous !
+                        </p>
+                    </div>
                 </div>
-            </article>
-            <article id="coworking">
-                <h2>Le coworking, c'est quoi ?</h2>
-                <p>Le coworking est un mouvement récent en France. C'est un espace de travail partagé qui rassemble un réseau de travailleurs. L'objectif est de permettre aux travailleurs de sortir de leur isolement, d'être dans un réseau ouvert et qui multiplie les échanges. Contrairement à un bureau, les places ne sont pas reservées, il n'y a pas d'engagement sur un  bail ni de préavis. Le coworking s'adresse à des indépendants, des télé-travailleurs, de petites structures récentes ou pas. Sceptique, dubitatif, enjoué, <a href="espace.html">venez tester</a>.</p>
-            </article>
-            <article id="inscription">
-                <h2>S'inscrire</h2>
-                <p>Notre intégrateur voulait absolument te faire un piège. Pour s'inscrire il faut venir ! Profites-en pour réfléchir à ta vengeance <a href="contact.html">en chemin</a>.
-            </article>
-        </section>
-        <footer class="wrapper">
-           <h2>Nous suivre</h2>
-            <a href="https://www.facebook.com/CoworkInMontpellier" title="Cowork'in Montpellier sur Facebook"><img src="img/fb.png" with="32" height="32" alt="Page Facebook"></a>
-            <a href="https://twitter.com/cowork_in_mtp" title="Cowork'in Montpellier sur Twitter"><img src="img/tw.png" with="32" height="32" alt="Compte twitter"></a>
-            <a href="https://plus.google.com/116678292901805429067" title="Cowork'in Montpellier sur Google Plus"><img src="img/ggp.png" with="32" height="32" alt="Page Google Plus"></a>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/jquery.colorbox-min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".modal").colorbox({rel:'modal'});
-            })
-        </script>
-    </body>
+                <div class="w3-row-padding w3-justify">
+                    <div class="w3-col l12 m12 s12 w3-padding">
+                        <h3 class="blue-text">Cowork'in Montpellier, c'est quoi ?</h3>
+                        <p>
+                            Cowork'in Montpellier est une association loi 1901 à but non lucratif. C'est un espace de coworking et de travail partagé qui rassemble un réseau de travailleurs. L'objectif est de permettre aux travailleurs de sortir de leur isolement, d'être dans un réseau ouvert et qui multiplie les échanges. Contrairement à un bureau, les places ne sont pas reservées, il n'y a pas d'engagement sur un bail ni de préavis. Le coworking est particulièrement adapté pour des indépendants, des télé-travailleurs, … Et tout cela dans la bonne humeur !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="w3-hide">Carte</h2>
+        <div id="map" class="w3-margin-top w3-margin-bottom"></div>
+
+        <div class="width-constraint">
+            <h2>Nous contacter</h2>
+            <div class="w3-text-blue w3-margin-bottom">
+                <form class="w3-container" action="http://submit.jotformeu.com/submit/30565176832356/" method="post" name="form_30565176832356" id="30565176832356" accept-charset="utf-8">
+                    <input type="hidden" name="formID" value="30565176832356" />
+
+                    <div class="w3-row w3-section">
+                        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                        <div class="w3-rest">
+                            <label class="w3-hide" for="input_1">Nom</label>
+                            <input type="text" class="w3-input w3-border" id="input_1" name="q1_nom" size="20" placeholder="Ton nom" required />
+                        </div>
+                    </div>
+
+                    <div class="w3-row w3-section">
+                        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope"></i></div>
+                        <div class="w3-rest">
+                            <label class="w3-hide" for="input_2">Email</label>
+                            <input type="email" class="w3-input w3-border" id="input_2" name="q4_email4" size="50" placeholder="Ton email" required />
+                        </div>
+                    </div>
+
+                    <div class="w3-row w3-section">
+                        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pen"></i></div>
+                        <div class="w3-rest">
+                            <label class="w3-hide" for="input_3">Message</label>
+                            <textarea id="input_3" class="w3-input w3-border" name="q5_message5" cols="40" rows="6" required></textarea>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="website" value="" />
+                    <input type="hidden" id="simple_spc" name="simple_spc" value="30565176832356" />
+                    <script type="text/javascript">
+                        document.getElementById("si" + "mple" + "_spc").value = "30565176832356-30565176832356";
+                    </script>
+
+                    <div class="w3-center w3-small">
+                        (ou directement via <a href="mailto:contact@coworkinmontpellier.org">contact@coworkinmontpellier.org</a>)
+                    </div>
+
+                    <div class="w3-row w3-section w3-center">
+                        <button id="input_55" type="submit" class="w3-button w3-blue w3-ripple w3-padding">ENVOYER</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="w3-center w3-margin-top w3-margin-bottom w3-animate-opacity width-constraint">
+                <div class="blue-text w3-xlarge important">Retrouve nous aussi sur</div>
+                <div>
+                    <a href="https://twitter.com/cowork_in_mtp" class="discreet w3-margin" title="Twitter"><i class="fab fa-twitter w3-jumbo w3-btn"></i></a>
+                    <a href="https://www.facebook.com/CoworkInMontpellier/" class="discreet w3-margin" title="Facebook"><i class="fab fa-facebook w3-jumbo w3-btn"></i></a>
+                    <a href="https://www.instagram.com/coworkinmtp/" class="discreet w3-margin" title="Instagram"><i class="fab fa-instagram w3-jumbo w3-btn"></i></a>
+                </div>
+            </div>
+
+
+            <div class="gallery">
+                <div class="w3-row w3-margin">
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo001.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo001.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Nos salles de travail peuvent accueillir environ 1 à 6 personnes. Il suffit de venir et de t'y installer
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo002.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo002.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Du matériel comme des écrans et clavier/souris d'ordinateur sont à la disposition des coworkers
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo003.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo003.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Bien que chacun a son propre travail, nous favorisons les échanges entre les coworkers
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-margin">
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo004.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo004.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            La pause café/thé et repas du midi est aussi l'occasion de faire connaissance et de partager un moment agréable
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo006.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo006.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                           Notre téléviseur peut être utilisé pour des présentations, ou simplement pour se divertir à l'occasion
+                        </div>
+                    </div>
+
+                    <div class="w3-col l4 m4 s4">
+                        <a href="resources/img/photos/photo005.jpg" class="highslide" onclick="return hs.expand(this)">
+                            <img src="resources/img/photos/photo005.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        </a>
+                        <div class="highslide-caption">
+                            Nous disposons d'une salle de détente. Chez nous, chaque coworker est libre de s'installer où il le souhaite pour travailler
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w3-margin-top w3-padding-32">
+        <div class="w3-row-padding width-constraint">
+            <div class="w3-col l4 m6 s12">
+                <div class="important w3-margin-top">Cowork'in Montpellier</div>
+                <div>
+                    4 Rue Auguste Comte<br/>
+                    34000 Montpellier
+                </div>
+            </div>
+            <div class="w3-col l4 m6 s12">
+                <div class="important w3-margin-top">Association Loi 1901</div>
+                <div>
+                    Déclarée sous n°W343014942<br/>
+                    <a href="resources/files/statuts.pdf" class="discreet"><i class="fas fa-external-link-alt"></i> Statuts</a>&nbsp;
+                    <a href="resources/files/reglement.pdf" class="discreet"><i class="fas fa-external-link-alt"></i> Règlement</a>
+                </div>
+            </div>
+            <div class="w3-col l4 m6 s12">
+                <div class="important w3-margin-top">Hébergé par GitHub Pages</div>
+                <div>
+                    88 Colin P Kelly Jr St<br/>
+                    San Francisco, CA 94107
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function initMap() {
+            let latlng = [43.610047, 3.867752];
+            var map = L.map('map', {
+                closePopupOnClick: false,
+                scrollWheelZoom: false,
+            }).setView(latlng, 17);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                minZoom: 13,
+                maxZoom: 18,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker(latlng).addTo(map)
+                .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte",
+                    {
+                        closeButton: false,
+                        autoClose: false,
+                        closeOnEscapeKey: false
+                    })
+                .openPopup();
+        }
+
+        if (typeof L !== "undefined") {
+            initMap();
+        } else {
+            var el = window.document.getElementById("leaflet-script")
+            el.onload = initMap;
+        }
+    </script>
+
+
+    <script>
+        function initHighslide() {
+            hs.graphicsDir = 'resources/3rd-party/highslide/graphics/';
+            hs.align = 'center';
+            hs.transitions = ['expand', 'crossfade'];
+            hs.outlineType = 'rounded-white';
+            hs.fadeInOut = true;
+            hs.numberPosition = 'caption';
+            hs.dimmingOpacity = 0.75;
+            hs.showCredits = false;
+            hs.lang =  {
+                cssDirection: 'ltr',
+                loadingText: 'Chargement…',
+                loadingTitle: 'Clic pour annuler',
+                focusTitle: 'Clic pour mettre en premier plan',
+                fullExpandTitle: 'Agrandir à la taille actuelle (f)',
+                creditsText: 'Par <i>Highslide JS</i>',
+                creditsTitle: 'Voir le site de Highslide JS',
+                previousText: 'Précédent',
+                nextText: 'Suivant',
+                moveText: 'Déplacer',
+                closeText: 'Fermer',
+                closeTitle: 'Fermer (esc)',
+                resizeTitle: 'Réduire/Agrandir',
+                playText: 'Jouer',
+                playTitle: 'Jouer le diaporama (espace)',
+                pauseText: 'Pause',
+                pauseTitle: 'Mettre en pause le diaporama (espace)',
+                previousTitle: 'Précédent (flèche gauche)',
+                nextTitle: 'Suivant (flèche droite)',
+                moveTitle: 'Déplacer',
+                fullExpandText: '1:1',
+                number: 'Image %1 sur %2',
+                restoreTitle: 'Clic pour fermer, click & drag pour déplacer. Flèches gauche/droite pour suivant et précédent.'
+            };
+
+            // Add the controlbar
+            if (hs.addSlideshow) hs.addSlideshow({
+                interval: 5000,
+                repeat: false,
+                useControls: true,
+                fixedControls: 'fit',
+                overlayOptions: {
+                    opacity: .75,
+                    position: 'bottom center',
+                    hideOnMouseOut: true
+                }
+            });
+        }
+
+        if ( typeof hs !== 'undefined' ) {
+            initHighslide();
+        } else {
+            var el = window.document.getElementById("highslide-script")
+            el.onload = initHighslide;
+        }
+    </script>
+
+</body>
 </html>

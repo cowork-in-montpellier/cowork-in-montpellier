@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /hostspot.html
+Disallow: /resources/files/
