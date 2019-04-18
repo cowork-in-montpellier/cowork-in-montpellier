@@ -54,6 +54,6 @@ a.discreet {
     text-decoration: none;
 }
 
-.gallery > * > * > * > img {
+.thumb {
     max-width: 90%;
 }

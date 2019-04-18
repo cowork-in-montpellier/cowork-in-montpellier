@@ -294,8 +294,8 @@
             <div class="gallery">
                 <div class="w3-row w3-margin">
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo001.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo001.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb1" href="resources/img/photos/photo001.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb1'})">
+                            <img src="resources/img/photos/photo001.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                             Nos salles de travail peuvent accueillir environ 1 à 6 personnes. Il suffit de venir et de t'y installer
@@ -303,8 +303,8 @@
                     </div>
 
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo002.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo002.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb2" href="resources/img/photos/photo002.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb2'})">
+                            <img src="resources/img/photos/photo002.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                             Du matériel comme des écrans et clavier/souris d'ordinateur sont à la disposition des coworkers
@@ -312,8 +312,8 @@
                     </div>
 
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo003.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo003.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb3" href="resources/img/photos/photo003.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb3'})">
+                            <img src="resources/img/photos/photo003.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                             Bien que chacun a son propre travail, nous favorisons les échanges entre les coworkers
@@ -323,8 +323,8 @@
 
                 <div class="w3-row w3-margin">
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo004.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo004.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb4" href="resources/img/photos/photo004.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb4'})">
+                            <img src="resources/img/photos/photo004.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                             La pause café/thé et repas du midi est aussi l'occasion de faire connaissance et de partager un moment agréable
@@ -332,8 +332,8 @@
                     </div>
 
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo006.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo006.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb6" href="resources/img/photos/photo006.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb6'})">
+                            <img src="resources/img/photos/photo006.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                            Notre téléviseur peut être utilisé pour des présentations, ou simplement pour se divertir à l'occasion
@@ -341,8 +341,8 @@
                     </div>
 
                     <div class="w3-col l4 m4 s4">
-                        <a href="resources/img/photos/photo005.jpg" class="highslide" onclick="return hs.expand(this)">
-                            <img src="resources/img/photos/photo005.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" />
+                        <a id="thumb5" href="resources/img/photos/photo005.jpg" class="highslide" onclick="return hs.expand(this, {thumbnailId: 'thumb5'})">
+                            <img src="resources/img/photos/photo005.jpg" alt="Photo de l'espace" title="Cliquer pour agrandir" class="thumb" />
                         </a>
                         <div class="highslide-caption">
                             Nous disposons d'une salle de détente. Chez nous, chaque coworker est libre de s'installer où il le souhaite pour travailler
@@ -460,6 +460,16 @@
                     opacity: .75,
                     position: 'bottom center',
                     hideOnMouseOut: true
+                }
+            });
+
+            // Fix for a strange bug with scrolling on mobile when view-port width < 768px... should not be required
+            hs.extend ( hs.Expander.prototype, {
+                onBeforeExpand: function() {
+                    window.window.scrollTo(0, hs.page.scrollTop);
+                },
+                onAfterExpand: function() {
+                    window.window.scrollTo(0, hs.page.scrollTop);
                 }
             });
         }
