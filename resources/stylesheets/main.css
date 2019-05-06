@@ -3,7 +3,7 @@ body {
 }
 
 .blue {
-    background-color: #579FFE;
+    background-color: #35A7DF;
     color: white;
 }
 
@@ -14,7 +14,7 @@ body {
 
 .blue-text {
     background-color: white;
-    color: #579FFE;
+    color: #35A7DF;
 }
 
 .important {
@@ -33,15 +33,15 @@ body {
 }
 
 footer {
-    background-color: #579FFE;
+    background-color: #35A7DF;
     color: white;
     min-height: 5rem;
 }
 
 h1, h2 {
     font-weight: bold;
-    margin-left: 5%;
-    text-shadow: 2px 2px 5px lightgray;
+    /* margin-left: 5%; */
+    /* text-shadow: 2px 2px 5px lightgray; */
 }
 
 #map {
@@ -56,4 +56,8 @@ a.discreet {
 
 .thumb {
     max-width: 90%;
+}
+
+.text-left {
+    text-align: left;
 }
