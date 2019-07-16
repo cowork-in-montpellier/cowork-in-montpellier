@@ -70,7 +70,7 @@
                         "English"
                     ],
                     "email": "contact@coworkinmontpellier.org",
-                    "streetAddress": "4 Rue Auguste Comte",
+                    "streetAddress": "22 Rue des Aiguerelles",
                     "postalCode": "34000",
                     "addressLocality": "Montpellier",
                     "addressCountry": "FR"
@@ -79,7 +79,7 @@
             "location": [
                 {
                     "@type": "PostalAddress",
-                    "streetAddress": "4 Rue Auguste Comte",
+                    "streetAddress": "22 Rue des Aiguerelles",
                     "postalCode": "34000",
                     "addressLocality": "Montpellier",
                     "addressCountry": "FR"
@@ -359,7 +359,7 @@
             <div class="w3-col l4 m6 s12">
                 <div class="important w3-margin-top">Cowork'in Montpellier</div>
                 <div>
-                    4 Rue Auguste Comte<br/>
+                    22 Rue des Aiguerelles<br/>
                     34000 Montpellier
                 </div>
             </div>
@@ -383,10 +383,10 @@
 
     <script>
         function initMap() {
-            let latlng = [43.610047, 3.867752];
+            var latlng = [43.603350, 3.882078];
             var map = L.map('map', {
                 closePopupOnClick: false,
-                scrollWheelZoom: false,
+                scrollWheelZoom: false
             }).setView(latlng, 17);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -396,7 +396,7 @@
             }).addTo(map);
 
             L.marker(latlng).addTo(map)
-                .bindPopup("<strong>Cowork'in Montpellier</strong><br>4 Rue Auguste Comte",
+                .bindPopup("<strong>Cowork'in Montpellier</strong><br>22 Rue des Aiguerelles",
                     {
                         closeButton: false,
                         autoClose: false,
