@@ -2,9 +2,9 @@
 section_one_title: Association loi 1901
 section_one_links:
   - text: Statuts
-    url: "/statuts-coworkin-montpellier.pdf"
+    url: "./statuts-coworkin-montpellier.pdf"
   - text: Réglement
-    url: "/regelemnt-coworkin-montpellier.pdf"
+    url: "./regelemnt-coworkin-montpellier.pdf"
 section_two_title: Retrouve-nous sur les réseaux
 section_two_links:
   - icon: facebook
