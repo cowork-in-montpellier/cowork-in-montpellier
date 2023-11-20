@@ -1,11 +1,13 @@
 items:
-  - text: Home
-    url: /
-  - text: Products
-    url: /products
-  - text: About
-    url: /pages/about-us
-  - text: Blog
-    url: /blog
+  - text: Accueil
+    url: "#top"
+  - text: Présentation
+    url: "#about"
+  - text: Services
+    url: "#services"
+  - text: Tarifs
+    url: "#prices"
+  - text: Photos
+    url: "#images"
   - text: Contact
-    url: /contact
+    url: "#contact"

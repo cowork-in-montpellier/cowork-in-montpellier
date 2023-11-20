@@ -1,26 +1,15 @@
 ---
-section_one_title: More info
+section_one_title: Association loi 1901
 section_one_links:
-  - text: About
-    url: "#"
-  - text: Info
-    url: "#"
-  - text: FAQ
-    url: "#"
-section_two_title: Helpful Links
+  - text: Statuts
+    url: "/statuts-coworkin-montpellier.pdf"
+  - text: Réglement
+    url: "/regelemnt-coworkin-montpellier.pdf"
+section_two_title: Retrouve-nous sur les réseaux
 section_two_links:
-  - text: About
-    url: "#"
-  - text: Info
-    url: "#"
-  - text: FAQ
-    url: "#"
-section_three_title: Find out more
-section_three_links:
-  - text: About
-    url: "#"
-  - text: Info
-    url: "#"
-  - text: FAQ
-    url: "#"
-copyright: ©2021 DESIGN BY NOVOLIO. IMAGES BY UNSPLASH
+  - icon: facebook
+    url: "https://www.facebook.com/CoworkInMontpellier"
+  - icon: twitter
+    url: "https://twitter.com/cowork_in_mtp"
+  - icon: instagram
+    url: "https://www.instagram.com/coworkinmtp/"

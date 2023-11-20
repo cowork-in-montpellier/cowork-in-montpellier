@@ -6,8 +6,7 @@ const { DateTime } = require("luxon");
 
 module.exports = (config) => {
   config.addPassthroughCopy({
-    ".src/images": "./images", // images
-    "./src/admin/config.yml": "./admin/config.yml", // admin config
+    "./src/images": "./images", // images
     "./src/static": "/", // static folders/files
   });
 
@@ -17,15 +16,11 @@ module.exports = (config) => {
   config.addFilter("featured", (items) => items.filter((item) => item.data.featured));
   config.addFilter("markdown", (data) => markdownItRenderer.render(data));
   config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
-    );
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
   });
 
   // yaml
-  config.addDataExtension("yaml", (contents) =>
-    yaml.load(contents)
-  );
+  config.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   // minify
   config.addTransform("htmlmin", function (content, outputPath) {
@@ -33,7 +28,7 @@ module.exports = (config) => {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }
@@ -45,6 +40,6 @@ module.exports = (config) => {
     dir: {
       input: "src",
     },
-      htmlTemplateEngine: "njk",
-  }
+    htmlTemplateEngine: "njk",
+  };
 };

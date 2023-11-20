@@ -1,28 +1,27 @@
 <div class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 px-12">
-	<div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 text-center lg:text-left py-24">
-		<div>
-			<div class="text-white opacity-50 text-4xl font-display">{{ settings.site_name }}</div>				
-		</div>
-		<div>
-			<div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_one_title }}</div>
-			{% for item in footer.section_one_links %}
-				<a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
-			{% endfor %}
-		</div>
-		<div>
-			<div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_two_title }}</div>
-			{% for item in footer.section_two_links %}
-				<a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
-			{% endfor %}
-		</div>
-		<div>
-			<div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_three_title }}</div>
-			{% for item in footer.section_three_links %}
-				<a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="text-sm lg:text-base text-center font-heading font-light tracking-widest uppercase text-white opacity-75 pb-24">
-		{{ footer.copyright }}
-	</div>
+  <div class="container">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
+      <div>
+        <div class="text-white opacity-50 text-3xl mb-4 font-display">{{ settings.site_name }}</div>
+        <p>22 Rue des Aiguerelles</p>
+        <p>34000 Montpellier</p>
+      </div>
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_one_title }}</div>
+        {% for item in footer.section_one_links %}
+        <a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
+        {% endfor %}
+      </div>
+      <div>
+        <div class="font-display text-white uppercase text-sm tracking-widest mb-6">{{ footer.section_two_title }}</div>
+        <div class="flex space-x-8">
+          {% for item in footer.section_two_links %}
+          <a href="{{ item.url }}" class="text-4xl" target="_blank">
+            <span class="fa-brands fa-{{item.icon}}"></span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

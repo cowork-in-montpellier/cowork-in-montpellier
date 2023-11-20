@@ -18,8 +18,8 @@
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "luxon": "^3.3.0",
-    "netlify-cli": "^14.2.1",
+    "netlify-cli": "^17.5.2",
     "stripe": "^12.2.0",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.5"
   }
 }
