@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
 
-    <title>{% if title %} {{title}} {% else %} {{settings.site_name}} {% endif %}</title>
-    {% if description %}
-    <meta name="description" content="{{description}}" />
-    {% endif %} {% block head %}{% endblock %}
+    {#
+    <title>{% if title %} {{title}} {% else %} {{layout.site_name}} - {{layout.site_punchline}} {% endif %}</title>
+    #} {#
+    <meta name="description" content="{{site_description}}" />
+    #} {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="./app.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -40,7 +41,7 @@
     ></script>
   </head>
   <body class="font-sans text-gray-700 antialiased bg-white">
-    {% include "./partials/navbar.html" %} {{ content | safe }} {% include "./partials/footer.html" %}
+    {{ content | safe }} {# {% include "./partials/footer.html" %} #}
 
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
