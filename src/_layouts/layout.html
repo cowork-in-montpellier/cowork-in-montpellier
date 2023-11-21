@@ -41,7 +41,11 @@
     ></script>
   </head>
   <body class="font-sans text-gray-700 antialiased bg-white">
-    {{ content | safe }} {% include "./partials/footer.html" %}
+    {% if not has_menu %}
+    <a href="./">
+      <img src="{{ global.logo }}" class="h-48 w-48 rounded-full object-contain object-center mx-auto mt-8" />
+    </a>
+    {% endif %} {{ content | safe }} {% include "./partials/footer.html" %}
 
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
