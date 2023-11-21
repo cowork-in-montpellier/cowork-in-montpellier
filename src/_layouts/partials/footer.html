@@ -2,24 +2,24 @@
   <div class="container">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
       <div>
-        <div class="text-white opacity-50 text-3xl mb-4 font-display">{{ layout.site_name }}</div>
+        <div class="text-white opacity-50 text-3xl mb-4 font-display">{{ global.site_name }}</div>
         <p>22 Rue des Aiguerelles</p>
         <p>34000 Montpellier</p>
       </div>
       <div>
         <div class="font-display text-white uppercase text-sm tracking-widest mb-6">
-          {{ layout.footer.section_one_title }}
+          {{ global.footer.section_one_title }}
         </div>
-        {% for item in layout.footer.section_one_links %}
+        {% for item in global.footer.section_one_links %}
         <a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
         {% endfor %}
       </div>
       <div>
         <div class="font-display text-white uppercase text-sm tracking-widest mb-6">
-          {{ layout.footer.section_two_title }}
+          {{ global.footer.section_two_title }}
         </div>
         <div class="flex space-x-8">
-          {% for item in layout.footer.section_two_links %}
+          {% for item in global.footer.section_two_links %}
           <a href="{{ item.url }}" class="text-4xl" target="_blank">
             <span class="fa-brands fa-{{item.icon}}"></span>
           </a>

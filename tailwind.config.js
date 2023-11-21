@@ -4,7 +4,7 @@ module.exports = {
   content: ["./**/*.html"],
   theme: {
     colors: {
-      // ...colors,
+      ...colors,
       // transparent: "transparent",
       // current: "currentColor",
       // white: "#ffffff",
