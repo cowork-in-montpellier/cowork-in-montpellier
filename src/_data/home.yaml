@@ -22,18 +22,24 @@ carousel:
 services:
   - icon: wifi
     description: Une connexion stable
+  - icon: phone-volume
+    description: 3 salles d'appels
   - icon: mug-hot
     description: Thé & Café à volonté
+  - icon: sun
+    description: Une grande terrasse
   - icon: bicycle
     description: Un parking à vélo sécurisé
-  - icon: print
-    description: Impressions illimitées
+  - icon: kitchen-set
+    description: Une cuisine équipée
   - icon: couch
     description: Une salle de pause
   - icon: snowflake
     description: Chauffage et climatisation
-  - icon: kitchen-set
-    description: Une cuisine équipée
+  - icon: print
+    description: Impressions illimitées
+  - icon: slack fa-brands
+    description: Participation au slack
   - icon: location-dot
     description: Juste derrière la gare
   - icon: heart

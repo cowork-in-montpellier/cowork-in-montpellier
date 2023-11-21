@@ -159,11 +159,14 @@
 
     L.marker(latlng)
       .addTo(map)
-      .bindPopup("<strong>Cowork'in Montpellier</strong><br>22 Rue des Aiguerelles<br>34000 Montpellier", {
-        closeButton: false,
-        autoClose: false,
-        closeOnEscapeKey: false,
-      })
+      .bindPopup(
+        '<a href="https://www.google.com/maps/place/{{ home.contact.address }}" target="_blank" class="text-primary"><strong>Cowork\'in Montpellier</strong><br>22 Rue des Aiguerelles<br>34000 Montpellier</a>',
+        {
+          closeButton: false,
+          autoClose: false,
+          closeOnEscapeKey: false,
+        }
+      )
       .openPopup();
   }
 

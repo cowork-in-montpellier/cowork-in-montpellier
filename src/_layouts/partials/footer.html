@@ -11,7 +11,7 @@
           {{ global.footer.section_one_title }}
         </div>
         {% for item in global.footer.section_one_links %}
-        <a href="{{ item.url }}" class="block mb-4">{{ item.text }}</a>
+        <a href="{{ item.url }}" class="block mb-4 hover:text-white">{{ item.text }}</a>
         {% endfor %}
       </div>
       <div>
@@ -20,7 +20,7 @@
         </div>
         <div class="flex space-x-8 justify-center md:justify-start">
           {% for item in global.footer.section_two_links %}
-          <a href="{{ item.url }}" class="text-4xl" target="_blank">
+          <a href="{{ item.url }}" class="text-4xl hover:text-white" target="_blank">
             <span class="fa-brands fa-{{item.icon}}"></span>
           </a>
           {% endfor %}
