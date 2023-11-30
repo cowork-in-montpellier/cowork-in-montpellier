@@ -4,14 +4,24 @@ site_punchline: |
   Le coworking
   associatif autogéré
   de Montpellier
-site_description: >
-  Cowork'in Montpellier est un espace de travail partagé géré par une structure associative.
-  Ses membres forment un réseau de travailleurs indépendants ou salariés, désireux de faire
-  vivre un lieu qui, en plus de fournir un service de bureau, apporte partage et échanges entre coworkers.
+site_sub_punchline: où il fait bon travailler
+site_description: |
+  Cowork'in Montpellier est un espace de travail partagé situé à deux pas de la gare.
+site_sub_description: |
+  Géré sous forme [associative](./asso.html), ses membres forment un réseau de travailleurs indépendants ou salariés,
+  désireux de faire vivre ce lieu qui apporte partage et convivialité.
 logo: ./images/logo-coworkin-montpellier-inverted.png
+infos:
+  email: contact@coworkinmontpellier.org
+  opening_times: Du lundi au vendredi de 9h à 18h
+  address: |
+    22 rue des Aiguerelles,
+    34000 Montpellier
 footer:
   section_one_title: Association loi 1901
   section_one_links:
+    - text: A propos
+      url: "./asso.html"
     - text: Statuts
       url: "./statuts-coworkin-montpellier.pdf"
     - text: Réglement

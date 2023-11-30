@@ -11,10 +11,17 @@ module.exports = (config) => {
   });
 
   // filters
+  config.addFilter("log", (value) => {
+    console.log(value);
+    return value;
+  });
   config.addFilter("limit", (items, limit) => items.slice(0, limit));
-  config.addFilter("category", (items, category) => items.filter((item) => item.data.category === category));
-  config.addFilter("featured", (items) => items.filter((item) => item.data.featured));
   config.addFilter("markdown", (data) => markdownItRenderer.render(data));
+  config.addFilter("json", (value, spaces = 2) =>
+    JSON.stringify(value, null, spaces).replace(/'/g, "\\'").replace(/"/g, "'")
+  );
+  config.addFilter("doubleLine", (value) => value.replace(/\n/g, "\n\n"));
+  config.addFilter("inline", (value) => value.replace(/\n/g, ""));
   config.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
   });

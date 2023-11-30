@@ -45,8 +45,16 @@
     <a href="./">
       <img src="{{ global.logo }}" class="h-48 w-48 rounded-full object-contain object-center mx-auto mt-8" />
     </a>
-    {% endif %} {{ content | safe }} {% include "./partials/footer.html" %}
 
+    {% endif %} {% if has_menu %} {{ content | safe }} {% else %}
+    <div class="container mx-auto my-16">
+      <div class="flex justify-center">
+        <div class="prose">{{ content | safe }}</div>
+      </div>
+    </div>
+    {% endif %} {% include "./partials/footer.html" %}
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script

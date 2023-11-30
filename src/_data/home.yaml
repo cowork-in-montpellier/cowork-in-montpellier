@@ -8,17 +8,34 @@ nav:
   - text: Tarifs
     url: "#prices"
   - text: Photos
-    url: "#images"
+    url: "#photos"
+  - text: Nous trouver
+    url: "#directions"
   - text: Contact
     url: "#contact"
-image: https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+cover: https://unsplash.com/photos/yFbyvpEGHFQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTgyfHxjb3dvcmtpbmd8ZnJ8MHx8fHwxNzAxMzU3NDIzfDA&force=true&w=1920
+# cover: ./images/banner.jpg
 photos:
-  - src: https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    caption: Le cowo
-  - src: https://images.unsplash.com/photo-1657641030530-1f6a84f19595?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    caption: Les bureaux
-  - src: https://images.unsplash.com/photo-1516611350064-481224e0cb0d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    caption: Néon
+  - src: ./images/salle-principale.jpg
+    caption: La salle principale
+  - src: ./images/salle-isolee.jpg
+    caption: Bureaux isolés
+  - src: ./images/cuisine.jpg
+    caption: La cuisine
+  - src: ./images/repas-convivial.jpg
+    caption: Les repas sont plus conviviaux qu'équilibrés ! 😋
+  - src: ./images/salle-d-appel.jpg
+    caption: Une salle d'appel
+  - src: ./images/salle-de-pause.jpg
+    caption: La salle de pause/sieste
+  - src: ./images/terrasse.jpg
+    caption: La terrasse
+  - src: ./images/parking-velo.jpg
+    caption: Le parking à vélo
+  - src: ./images/sortie-plage.jpeg
+    caption: Une sortie plage
+  - src: ./images/fete-noel.jpg
+    caption: Soirée de Noël
 services:
   - icon: wifi
     description: Une connexion stable
@@ -44,7 +61,3 @@ services:
     description: Juste derrière la gare
   - icon: heart
     description: Beaucoup d'amour
-contact:
-  email: contact@coworkinmontpellier.org
-  opening_times: Du lundi au vendredi de 9h à 18h
-  address: 22 rue des Aiguerelles, 34000 Montpellier

@@ -1,8 +1,8 @@
 <div class="-mt-24 w-full h-screen">
-  <div class="relative h-full z-10 text-center py-24 flex flex-col justify-between">
+  <div class="relative h-full z-10 text-center py-16 md:py-24 flex flex-col justify-between">
     <div class="mx-auto">
       <a href="/" class="text-white uppercase font-bold text-2xl tracking-widest">
-        <img src="{{ global.logo }}" class="h-48 w-48 rounded-full object-contain object-center" />
+        <img src="{{ global.logo }}" class="h-24 w-24 lg:h-48 lg:w-48 rounded-full object-contain object-center" />
       </a>
     </div>
     <h1
@@ -10,11 +10,12 @@
       style="text-shadow: 0 0 1rem black; line-height: 1.5"
     >
       {{ global.site_punchline | replace("\n", "<br />") | safe }}
+      <span style="color: #65bbe7">{{global.site_sub_punchline}}</span>
     </h1>
     <div class="mx-auto">
       <a
         href="#about"
-        class="inline-block bg-primary rounded-full text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-24"
+        class="inline-block bg-primary rounded-full text-white uppercase text-sm tracking-widest font-heading px-8 py-4"
       >
         En savoir plus
         <i class="fa fa-arrow-down"></i>
@@ -22,6 +23,6 @@
     </div>
   </div>
 
-  <img src="{{ home.image }}" class="w-full h-full absolute inset-0 object-cover" />
+  <img src="{{ home.cover }}" class="w-full h-full absolute inset-0 object-cover object-bottom mx-auto" />
   <div class="w-full h-full bg-black absolute top-0 left-0 opacity-10"></div>
 </div>

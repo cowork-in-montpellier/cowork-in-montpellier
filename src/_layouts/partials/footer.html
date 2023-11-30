@@ -3,8 +3,8 @@
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
       <div>
         <div class="text-white text-3xl mb-4 font-display">{{ global.site_name }}</div>
-        <p>22 Rue des Aiguerelles</p>
-        <p>34000 Montpellier</p>
+        <div class="mb-4">{{ global.infos.opening_times | markdown | safe }}</div>
+        <div>{{ global.infos.address | doubleLine | markdown | safe }}</div>
       </div>
       <div>
         <div class="font-display text-white uppercase text-sm tracking-widest mb-6">

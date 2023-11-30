@@ -2,7 +2,7 @@
   <div x-data="{showMenu: false}" class="flex items-center">
     <button
       x-on:click="showMenu = true"
-      class="fixed text-primary bg-white top-0 right-0 mt-8 mr-6 rounded-full w-12 h-12 leading-none text-2xl"
+      class="fixed text-primary bg-white shadow top-0 right-0 mt-8 mr-6 rounded-full w-12 h-12 leading-none text-2xl"
     >
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -13,7 +13,7 @@
       class="fixed inset-0 w-full h-full bg-white z-50 text-primary"
     >
       <div
-        class="h-full mx-auto px-6 py-8 relative z-10 flex flex-col items-center justify-center text-2xl uppercase font-bold tracking-widest space-y-6"
+        class="h-full mx-auto px-6 py-16 md:py-24 relative z-10 flex flex-col items-center justify-between text-2xl uppercase font-bold tracking-widest"
       >
         <button
           x-on:click="showMenu = false"
@@ -22,7 +22,7 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
 
-        <img src="{{ global.logo }}" class="absolute top-8 h-48 w-48 rounded-full object-contain object-center" />
+        <img src="{{ global.logo }}" class="h-24 w-24 lg:h-48 lg:w-48 rounded-full object-contain object-center" />
 
         <ul class="text-center">
           {% for item in home.nav %}
