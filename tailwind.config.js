@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        display: ["Playfair Display", "serif"],
+        display: ["Museo", "Playfair Display", "serif"],
         heading: ["Fira Sans Condensed", "serif"],
         sans: ["Overpass", "sans-serif"],
       },

@@ -1,71 +1,70 @@
-<div id="contact" class="text-center py-12 px-6 mt-12">
-  <h2 class="font-display font-bold text-5xl mb-6">Contact</h2>
+<div id="contact" class="py-12 px-6">
+  <h2 class="font-display text-center font-bold text-5xl mb-6">Contact</h2>
   <div class="w-24 h-2 bg-primary mb-8 mx-auto"></div>
-</div>
-
-<div class="container mx-auto px-6 mb-12">
-  <p class="mb-12 text-center">
-    Vous pouvez utiliser le formulaire ci-dessous ou bien nous écrire directement à
-    <a href="mailto:{{ global.infos.email }}" class="underline underline-offset-4"> {{ global.infos.email }} </a>
-  </p>
-  <div class="max-w-lg mx-auto">
-    <div>
-      <form
-        method="POST"
-        action="https://submit.jotformeu.com/submit/30565176832356/"
-        name="form_30565176832356"
-        id="30565176832356"
-        x-data="{
-          invalidEmail: false,
-        }"
-      >
-        <input type="hidden" name="formID" value="30565176832356" />
-        <div>
-          <label class="block text-base tracking-tight text-gray-600">Nom</label>
-          <input
-            name="name"
-            type="text"
-            placeholder="Victor Hugo"
-            required
-            class="mt-2 w-full border-none text-sm p-4 bg-gray-100 text-gray-700"
-          />
-        </div>
-        <div class="mt-6">
-          <label class="block text-base tracking-tight text-gray-600">Email</label>
-          <input
-            name="email"
-            type="email"
-            placeholder="victor@hugo.fr"
-            required
-            class="mt-2 w-full border-none text-sm p-4 bg-gray-100 text-gray-700"
-            @change="invalidEmail = $el.value && !$el.checkValidity()"
-          />
-          <p class="mt-2 text-sm text-red-600" x-show="invalidEmail" x-transition>
-            Le format saisi est invalide. Le format attendu est par exemple exemple@domaine.fr
-          </p>
-        </div>
-        <div class="mt-6">
-          <label class="block text-base tracking-tight text-gray-600">Message</label>
-          <textarea
-            name="message"
-            placeholder="Ce siècle avait deux ans ..."
-            required
-            class="mt-2 w-full h-32 border-none text-sm p-4 bg-gray-100 text-gray-700"
-          ></textarea>
-        </div>
-        <p class="mt-4">
-          <small><strong>NB:</strong> Tous les champs sont obligatoires</small>
-        </p>
-        <button
-          class="inline-block bg-primary text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-6"
+  <div class="container mx-auto">
+    <p class="mb-12 text-center">
+      Vous pouvez utiliser le formulaire ci-dessous ou bien nous écrire directement à
+      <a href="mailto:{{ global.infos.email }}" class="underline underline-offset-4"> {{ global.infos.email }} </a>
+    </p>
+    <div class="max-w-lg mx-auto">
+      <div>
+        <form
+          method="POST"
+          action="https://submit.jotformeu.com/submit/30565176832356/"
+          name="form_30565176832356"
+          id="30565176832356"
+          x-data="{
+            invalidEmail: false,
+          }"
         >
-          Envoyer
-        </button>
-        <input type="hidden" id="simple_spc" name="simple_spc" value="30565176832356" />
-        <script type="text/javascript">
-          document.getElementById("si" + "mple" + "_spc").value = "30565176832356-30565176832356";
-        </script>
-      </form>
+          <input type="hidden" name="formID" value="30565176832356" />
+          <div>
+            <label class="block text-base tracking-tight text-gray-600">Nom</label>
+            <input
+              name="name"
+              type="text"
+              placeholder="Victor Hugo"
+              required
+              class="mt-2 w-full border-none text-sm p-4 bg-gray-100 text-gray-700"
+            />
+          </div>
+          <div class="mt-6">
+            <label class="block text-base tracking-tight text-gray-600">Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="victor@hugo.fr"
+              required
+              class="mt-2 w-full border-none text-sm p-4 bg-gray-100 text-gray-700"
+              @change="invalidEmail = $el.value && !$el.checkValidity()"
+            />
+            <p class="mt-2 text-sm text-red-600" x-show="invalidEmail" x-transition>
+              Le format saisi est invalide. Le format attendu est par exemple exemple@domaine.fr
+            </p>
+          </div>
+          <div class="mt-6">
+            <label class="block text-base tracking-tight text-gray-600">Message</label>
+            <textarea
+              name="message"
+              placeholder="Ce siècle avait deux ans ..."
+              required
+              class="mt-2 w-full h-32 border-none text-sm p-4 bg-gray-100 text-gray-700"
+            ></textarea>
+          </div>
+          <p class="mt-4">
+            <small><strong>NB:</strong> Tous les champs sont obligatoires</small>
+          </p>
+          <button
+            class="inline-block bg-primary text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-6"
+          >
+            Envoyer
+          </button>
+          <input type="hidden" id="simple_spc" name="simple_spc" value="30565176832356" />
+          <script type="text/javascript">
+            document.getElementById("si" + "mple" + "_spc").value = "30565176832356-30565176832356";
+          </script>
+        </form>
+      </div>
     </div>
   </div>
 </div>
