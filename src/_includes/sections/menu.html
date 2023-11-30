@@ -24,14 +24,18 @@
 
         <img src="{{ global.logo }}" class="absolute top-8 h-48 w-48 rounded-full object-contain object-center" />
 
-        {% for item in home.nav %}
-        <a
-          href="{{ item.url }}"
-          class="inline-block border-b-4 border-transparent hover:border-primary"
-          @click="showMenu = false"
-          >{{ item.text }}</a
-        >
-        {% endfor %}
+        <ul class="text-center">
+          {% for item in home.nav %}
+          <li class="my-4">
+            <a
+              href="{{ item.url }}"
+              class="inline-block border-b-4 border-transparent hover:border-primary"
+              @click="showMenu = false"
+              >{{ item.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
     </div>
