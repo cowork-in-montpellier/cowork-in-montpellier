@@ -6,10 +6,10 @@ site_punchline: |
   de Montpellier
 site_sub_punchline: où il fait bon travailler
 site_description: |
-  Cowork'in Montpellier est un espace de travail partagé situé à deux pas de la gare.
+  Cowork'in Montpellier est un espace de travail partagé situé à deux pas de la gare géré par une structure [associative](./asso.html).
 site_sub_description: |
-  Géré sous forme [associative](./asso.html), ses membres forment un réseau de travailleurs indépendants ou salariés,
-  désireux de faire vivre ce lieu qui apporte partage et convivialité.
+  Ses membres formons un réseau de travailleurs indépendants ou salariés,
+  désireux de faire vivre ce lieu qui nous apporte partage et convivialité.
 logo: ./images/logo-coworkin-montpellier-inverted.png
 infos:
   email: contact@coworkinmontpellier.org

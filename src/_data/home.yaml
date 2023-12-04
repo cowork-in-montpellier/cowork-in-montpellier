@@ -35,7 +35,9 @@ photos:
   - src: ./images/sortie-plage.jpeg
     caption: Une sortie plage
   - src: ./images/fete-noel.jpg
-    caption: Soirée de Noël
+    caption: Soirée d'anniversaire du coworking
+  - src: ./images/soiree-jeux.jpg
+    caption: Une soirée jeux de société
 services:
   - icon: wifi
     description: Une connexion stable

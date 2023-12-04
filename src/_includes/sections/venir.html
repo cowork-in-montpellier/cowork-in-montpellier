@@ -4,34 +4,36 @@
     <div class="w-24 h-2 bg-primary mb-8 mx-auto"></div>
     <p class="opacity-75 mb-8 text-base md:text-lg font-bold">Idéalement situé, juste derrière la gare</p>
   </div>
-  <div class="container mx-auto px-6">
+  <div class="container mx-auto px-6 py-8">
     <div class="mx-auto flex justify-center">
-      <div>
-        <div class="mb-4">
-          <i class="fa fa-location-dot mr-4"></i>
-          <a
-            href="https://www.google.com/maps/place/{{ global.infos.address | inline }}"
-            target="_blank"
-            class="underline underline-offset-4"
-          >
-            {{ global.infos.address }}
-          </a>
-        </div>
+      <div class="flex flex-col justify-center">
         <div>
-          <i class="fa fa-clock mr-4"></i>
-          {{ global.infos.opening_times }}
+          <div>
+            <div class="mb-4">
+              <i class="fa fa-location-dot mr-4"></i>
+              <a
+                href="https://www.google.com/maps/place/{{ global.infos.address | inline }}"
+                target="_blank"
+                class="underline underline-offset-4"
+              >
+                {{ global.infos.address }}
+              </a>
+            </div>
+            <div>
+              <i class="fa fa-clock mr-4"></i>
+              {{ global.infos.opening_times }}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="flex justify-center">
-      <div class="mt-8 prose">
-        <p>Pour venir, vous n'avez que l'embarras du choix :</p>
-        <ul>
-          <li><strong>Tramway</strong> : Lignes 1, 2, 4, arrêt gare Saint Roch ; Ligne 3, arrêt place Carnot</li>
-          <li><strong>Bus</strong> : Lignes 8 et 11, arrêt Henri René</li>
-          <li><strong>Train</strong> : TGV et trains régionaux à la gare Saint Roch</li>
-          <li><strong>Bicyclette</strong> : desservi par l'anneau vélo sur le boulevard de Strasbourg</li>
-        </ul>
+        <div class="mt-12 prose">
+          <p>Pour venir, vous n'avez que l'embarras du choix :</p>
+          <ul>
+            <li><strong>Tramway</strong> : Lignes 1, 2, 4, arrêt gare Saint Roch ; Ligne 3, arrêt place Carnot</li>
+            <li><strong>Bus</strong> : Lignes 8 et 11, arrêt Henri René</li>
+            <li><strong>Train</strong> : TGV et trains régionaux à la gare Saint Roch</li>
+            <li><strong>Bicyclette</strong> : desservi par l'anneau vélo sur le boulevard de Strasbourg</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
