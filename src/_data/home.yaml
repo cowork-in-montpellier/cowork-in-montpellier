@@ -18,8 +18,8 @@ cover: https://unsplash.com/photos/yFbyvpEGHFQ/download?ixid=M3wxMjA3fDB8MXxzZWF
 photos:
   - src: ./images/salle-principale.jpg
     caption: La salle principale
-  - src: ./images/salle-isolee.jpg
-    caption: Bureaux isolés
+  - src: ./images/salle-principale-2.jpg
+    caption: Tous les bureaux sont partagés
   - src: ./images/cuisine.jpg
     caption: La cuisine
   - src: ./images/repas-convivial.jpg
@@ -38,6 +38,8 @@ photos:
     caption: Soirée d'anniversaire du coworking
   - src: ./images/soiree-jeux.jpg
     caption: Une soirée jeux de société
+  - src: ./images/courrier-coworkers.jpg
+    caption: Le courrier des coworkers
 services:
   - icon: wifi
     description: Une connexion stable
