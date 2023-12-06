@@ -1,6 +1,7 @@
 const htmlmin = require("html-minifier");
 const yaml = require("js-yaml");
 const markdownIt = require("markdown-it");
+const { markdownToTxt } = require("markdown-to-txt");
 const markdownItRenderer = new markdownIt();
 const { DateTime } = require("luxon");
 
@@ -17,6 +18,7 @@ module.exports = (config) => {
   });
   config.addFilter("limit", (items, limit) => items.slice(0, limit));
   config.addFilter("markdown", (data) => markdownItRenderer.render(data));
+  config.addFilter("plain", (data) => markdownToTxt(data));
   config.addFilter("json", (value, spaces = 2) =>
     JSON.stringify(value, null, spaces).replace(/'/g, "\\'").replace(/"/g, "'")
   );

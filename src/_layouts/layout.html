@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
 
     <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
@@ -16,11 +15,9 @@
     <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
-    {#
     <title>{% if title %} {{title}} {% else %} {{global.site_name}} - {{global.site_punchline}} {% endif %}</title>
-    #} {#
-    <meta name="description" content="{{site_description}}" />
-    #} {% block head %}{% endblock %}
+    <meta name="description" content="{{global.site_description | plain}}" />
+    {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="./app.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
