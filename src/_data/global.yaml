@@ -1,5 +1,5 @@
 ---
-site_name: Coworkin' Montpellier
+site_name: Cowork'in Montpellier
 site_punchline: |
   L'espace de coworking
 site_sub_punchline: où il fait bon travailler
@@ -37,7 +37,7 @@ footer:
       url: "./asso.html"
     - text: Statuts
       url: "./statuts-coworkin-montpellier.pdf"
-    - text: Réglement
+    - text: Règlement
       url: "./reglement-coworkin-montpellier.pdf"
   section_two_title: Retrouve-nous sur les réseaux
   section_two_links:
