@@ -43,19 +43,19 @@ photos:
 services:
   - icon: plug
     title: Des bureaux
-    description: 18 postes, nomades, dans des pièces partagées avec plusieurs coworkers
+    description: 18 postes, nomades, dans des pièces partagées
   - icon: wifi
     title: Une connexion stable
-    description: Parce qu'un coworking sans wifi, c'est comme un jour de printemps sans soleil ...
+    description: Parce qu'un coworking sans wifi, c'est comme un jour de printemps sans soleil...
   - icon: phone-volume
-    title: 3 salles d'appels
+    title: 3 salles d'appel
     description: Qui dit travail à distance dit probablement quelques appels à passer, non ?
   - icon: display
-    title: Des écrans en libre service
-    description: Pour se prendre pour un trader ... ou pas !
+    title: Des écrans en libre-service
+    description: Pour se prendre pour un trader... ou pas !
   - icon: mug-hot
     title: Thé & café à volonté
-    description: On les voit bien ceux qui baillent au fond
+    description: Parce que la caféine c'est la vie
   - icon: sun
     title: Une grande terrasse
     description: Le meilleur de la convivialité, 6 mois de l'année
@@ -64,16 +64,16 @@ services:
     description: Une cour isolée en contrebas rien que pour les vélos des coworkers
   - icon: utensils
     title: Une cuisine équipée
-    description: Micro-onde, frigo, mais pas de plaques de cuisson
+    description: Micro-ondes, frigo, et toute la vaisselle qu'il faut
   - icon: couch
     title: Une salle de pause
     description: Avec des canaps, pour la petite sieste post-prandiale qui va bien.
   - icon: snowflake
     title: Chauffage et clim'
-    description: Même si bien sûr il fait toujours un temps idéal à Montpellier
+    description: Même si bien sûr, il fait toujours un temps idéal à Montpellier
   - icon: print
     title: Une imprimante
     description: Multifonction-wifi-laser-couleur-recto-verso à écran tactile intuitif
   - icon: slack fa-brands
-    title: Participation au slack
+    title: Participation au Slack
     description: Même quand on n'est pas là, la discussion continue

@@ -1,8 +1,7 @@
 ---
 site_name: Coworkin' Montpellier
 site_punchline: |
-  L'espace de
-  coworking
+  L'espace de coworking
 site_sub_punchline: où il fait bon travailler
 site_description: |
   Cowork'in Montpellier est un **espace de travail partagé** situé **à deux pas de la gare** géré par une structure [associative](./asso.html).
@@ -13,7 +12,7 @@ site_sub_sub_description: |
   Que vous soyez juste de passage ou tourniez en rond dans votre salon, digital nomade ou [Baron de Caravètes](https://fr.wikipedia.org/wiki/Baronnie_de_Carav%C3%A8tes), riche ou fauché, **venez nous rencontrer** !
 logo: ./images/logo-coworkin-montpellier-inverted.png
 site_new_description: |
-  Cowork'in Montpellier est un **espace de travail partagé** [associatif](./asso.html) entièrement géré par les coworkers eux-mêmes.
+  Cowork'in Montpellier est un **espace de travail partagé** [associatif](./asso.html), entièrement géré par les coworkers eux-mêmes.
 
   Il est situé au centre-ville de Montpellier, **à deux pas de la gare** et trois de l'Écusson.
 
@@ -24,7 +23,7 @@ site_new_description2: |
   Les bureaux sont **nomades** et chacun est libre de venir **à la journée** comme en **abonnement mensuel**,
   au gré de son activité, de son budget, ou simplement de son envie !
 site_new_description3: |
-  Un **rendez-vous incontournable** pour les micro-entrepreneurs, freelances, travailleurs nomades ou autres salariés en télétravails en tous genres.
+  Un **rendez-vous incontournable** pour les micro-entrepreneurs, freelances et télétravailleurs salariés, nomades ou autres.
 infos:
   email: contact@coworkinmontpellier.org
   opening_times: Du lundi au vendredi de 9h à 18h
@@ -34,7 +33,7 @@ infos:
 footer:
   section_one_title: Association loi 1901
   section_one_links:
-    - text: A propos
+    - text: À propos
       url: "./asso.html"
     - text: Statuts
       url: "./statuts-coworkin-montpellier.pdf"
