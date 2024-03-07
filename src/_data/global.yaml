@@ -5,11 +5,6 @@ site_punchline: |
 site_sub_punchline: où il fait bon travailler
 site_description: |
   Cowork'in Montpellier est un **espace de travail partagé** situé **à deux pas de la gare** géré par une structure [associative](./asso.html).
-site_sub_description: |
-  Ses membres formons un réseau de travailleurs indépendants ou salariés,
-  désireux de faire vivre ce lieu qui apporte **partage et convivialité**.
-site_sub_sub_description: |
-  Que vous soyez juste de passage ou tourniez en rond dans votre salon, digital nomade ou [Baron de Caravètes](https://fr.wikipedia.org/wiki/Baronnie_de_Carav%C3%A8tes), riche ou fauché, **venez nous rencontrer** !
 logo: ./images/logo-coworkin-montpellier-inverted.png
 site_new_description: |
   Cowork'in Montpellier est un **espace de travail partagé** [associatif](./asso.html), entièrement géré par les coworkers eux-mêmes.
