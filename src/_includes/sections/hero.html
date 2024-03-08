@@ -1,12 +1,12 @@
 <div class="-mt-24 w-full h-screen">
-  <div class="relative h-full z-10 text-center py-16 md:py-24 flex flex-col justify-between">
+  <div class="relative h-full z-10 text-center py-16 md:py-24 flex flex-col justify-between sm:pb-24 pb-48">
     <div class="mx-auto">
       <a href="/" class="text-white uppercase font-bold text-2xl tracking-widest">
         <img src="{{ global.logo }}" class="h-24 w-24 lg:h-48 lg:w-48 rounded-full object-contain object-center" />
       </a>
     </div>
     <h1
-      class="text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold"
+      class="text-white text-center px-4 text-4xl lg:text-5xl xl:text-6xl font-display font-bold"
       style="text-shadow: 0 0 1rem black; line-height: 1.5"
     >
       {{ global.site_punchline | replace("\n", "<br />") | safe }}
