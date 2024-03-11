@@ -16,29 +16,29 @@ nav:
 cover: https://unsplash.com/photos/yFbyvpEGHFQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTgyfHxjb3dvcmtpbmd8ZnJ8MHx8fHwxNzAxMzU3NDIzfDA&force=true&w=1920
 # cover: ./images/banner.jpg
 photos:
-  - src: ./images/salle-principale.jpg
+  - src: /images/salle-principale.jpg
     caption: La salle principale
-  - src: ./images/salle-principale-2.jpg
+  - src: /images/salle-principale-2.jpg
     caption: Tous les bureaux sont partagés
-  - src: ./images/cuisine.jpg
+  - src: /images/cuisine.jpg
     caption: La cuisine
-  - src: ./images/repas-convivial.jpg
+  - src: /images/repas-convivial.jpg
     caption: Les repas sont plus conviviaux qu'équilibrés ! 😋
-  - src: ./images/salle-d-appel.jpg
+  - src: /images/salle-d-appel.jpg
     caption: Une salle d'appel
-  - src: ./images/salle-de-pause.jpg
+  - src: /images/salle-de-pause.jpg
     caption: La salle de pause/sieste
-  - src: ./images/terrasse.jpg
+  - src: /images/terrasse.jpg
     caption: La terrasse
-  - src: ./images/parking-velo.jpg
+  - src: /images/parking-velo.jpg
     caption: Le parking à vélo
-  - src: ./images/sortie-plage.jpeg
+  - src: /images/sortie-plage.jpeg
     caption: Une sortie plage
-  - src: ./images/fete-noel.jpg
+  - src: /images/fete-noel.jpg
     caption: Soirée d'anniversaire du coworking
-  - src: ./images/soiree-jeux.jpg
+  - src: /images/soiree-jeux.jpg
     caption: Une soirée jeux de société
-  - src: ./images/courrier-coworkers.jpg
+  - src: /images/courrier-coworkers.jpg
     caption: Le courrier des coworkers
 services:
   - icon: plug

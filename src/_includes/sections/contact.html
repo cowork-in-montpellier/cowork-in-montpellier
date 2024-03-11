@@ -8,21 +8,45 @@
     </p>
     <div class="max-w-lg mx-auto">
       <div>
+        <script>
+          document.addEventListener("alpine:init", () => {
+            Alpine.data("useForm", () => ({
+              formId: "30565176832356",
+              robotCheck: "",
+              invalidEmail: false,
+              isSending: false,
+              errorMsg: null,
+              confirmationMsg: null,
+              async post() {
+                try {
+                  this.isSending = true;
+                  this.robotCheck = `${this.formId}-${this.formId}`;
+                  await fetch(this.$el.action, { method: this.$el.method, body: new FormData(this.$el) });
+                  this.confirmationMsg = "Le message a bien été envoyé.";
+                } catch (e) {
+                  this.errorMsg = `Une erreur est survenue lors de l'envoi du message : ${e?.message}`;
+                } finally {
+                  this.isSending = false;
+                }
+              },
+            }));
+          });
+        </script>
+
         <form
           method="POST"
           action="https://submit.jotformeu.com/submit/30565176832356/"
-          name="form_30565176832356"
-          id="30565176832356"
-          x-data="{
-            invalidEmail: false,
-          }"
+          :name="`form_${formId}`"
+          :id="formId"
+          x-data="useForm"
+          x-on:submit.prevent="post"
         >
-          <input type="hidden" name="formID" value="30565176832356" />
+          <input type="hidden" name="formID" :value="formId" />
           <div>
             <label for="name" class="block text-base tracking-tight text-gray-600">Nom</label>
             <input
               id="name"
-              name="name"
+              name="q1_nom"
               type="text"
               placeholder="Victor Hugo"
               required
@@ -33,7 +57,7 @@
             <label for="email" class="block text-base tracking-tight text-gray-600">Email</label>
             <input
               id="email"
-              name="email"
+              name="q4_email4"
               type="email"
               placeholder="victor@hugo.fr"
               required
@@ -48,7 +72,7 @@
             <label for="message" class="block text-base tracking-tight text-gray-600">Message</label>
             <textarea
               id="message"
-              name="message"
+              name="q5_message5"
               placeholder="Ce siècle avait deux ans..."
               required
               class="mt-2 w-full h-32 border-none text-sm p-4 bg-gray-100 text-gray-700"
@@ -57,15 +81,30 @@
           <p class="mt-4">
             <small><strong>NB:</strong> Tous les champs sont obligatoires.</small>
           </p>
+          <input type="hidden" id="simple_spc" name="simple_spc" :value="robotCheck" />
           <button
+            id="input_55"
+            type="submit"
             class="inline-block bg-primary text-white uppercase text-sm tracking-widest font-heading px-8 py-4 mt-6"
+            :disabled="isSending"
+            x-text="isSending ? 'Envoi en cours ...' : 'Envoyer' "
+          ></button>
+          <div
+            x-show="errorMsg"
+            x-transition
+            class="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+            role="alert"
           >
-            Envoyer
-          </button>
-          <input type="hidden" id="simple_spc" name="simple_spc" value="30565176832356" />
-          <script type="text/javascript">
-            document.getElementById("si" + "mple" + "_spc").value = "30565176832356-30565176832356";
-          </script>
+            <p x-text="errorMsg"></p>
+          </div>
+          <div
+            x-show="confirmationMsg"
+            x-transition
+            class="mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+            role="alert"
+          >
+            <p x-text="confirmationMsg"></p>
+          </div>
         </form>
       </div>
     </div>

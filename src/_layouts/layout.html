@@ -62,6 +62,63 @@
       async
       defer
     ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{global.site_name}}",
+        "description": "{{global.site_description | plain}}",
+        "url": "{{ global.site_origin }}",
+        "logo": "{{ global.site_origin }}{{ global.logo }}",
+        "image": [
+          "{{ global.site_origin }}{{home.photos[0].src}}",
+          "{{ global.site_origin }}{{home.photos[1].src}}",
+          "{{ global.site_origin }}{{home.photos[2].src}}",
+          "{{ global.site_origin }}{{home.photos[3].src}}",
+          "{{ global.site_origin }}{{home.photos[4].src}}",
+          "{{ global.site_origin }}{{home.photos[5].src}}",
+          "{{ global.site_origin }}{{home.photos[6].src}}",
+          "{{ global.site_origin }}{{home.photos[7].src}}"
+        ],
+        "email": "{{ global.infos.email }}",
+        "openingHours": ["Mo-Fr 09:00-18:00"],
+        "priceRange": "8€-15€",
+        "contactPoint": [
+          {
+            "@type": "PostalAddress",
+            "availableLanguage": ["French", "English"],
+            "email": "{{ global.infos.email }}",
+            "streetAddress": "{{ global.infos.address }}",
+            "postalCode": "{{ global.infos.zip }}",
+            "addressLocality": "{{ global.infos.city }}",
+            "addressCountry": "FR"
+          }
+        ],
+        "location": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ global.infos.address }}",
+            "postalCode": "{{ global.infos.zip }}",
+            "addressLocality": "{{ global.infos.city }}",
+            "addressCountry": "FR"
+          }
+        ],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ global.infos.address }}",
+            "postalCode": "{{ global.infos.zip }}",
+            "addressLocality": "{{ global.infos.city }}",
+            "addressCountry": "FR"
+          }
+        ],
+        "sameAs": [
+          "{{global.footer.section_two_links[0].url}}",
+          "{{global.footer.section_two_links[1].url}}",
+          "{{global.footer.section_two_links[2].url}}"
+        ]
+      }
+    </script>
   </head>
   <body class="font-sans text-gray-700 antialiased bg-white">
     {% if not has_menu %}

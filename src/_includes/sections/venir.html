@@ -12,11 +12,11 @@
             <div class="mb-4">
               <i class="fa fa-location-dot mr-4" aria-hidden="true"></i>
               <a
-                href="https://www.google.com/maps/place/{{ global.infos.address | inline }}"
+                href="https://www.google.com/maps/place/{{ global.infos.address }} {{global.infos.zip}} {{global.infos.city}}"
                 target="_blank"
                 class="underline underline-offset-4"
               >
-                {{ global.infos.address }}
+                {{ global.infos.address }}, {{global.infos.zip}} {{global.infos.city}}
               </a>
             </div>
             <div>
@@ -57,7 +57,7 @@
     L.marker(latlng)
       .addTo(map)
       .bindPopup(
-        '<a href="https://www.google.com/maps/place/{{ global.infos.address | inline }}" target="_blank" class="text-primary"><strong>Cowork\'in Montpellier</strong><br>22 Rue des Aiguerelles<br>34000 Montpellier</a>',
+        '<a href="https://www.google.com/maps/place/{{ global.infos.address }} {{global.infos.zip}} {{global.infos.city}}" target="_blank" class="text-primary"><strong>{{global.site_name}}</strong><br>{{ global.infos.address }}<br>{{global.infos.zip}} {{global.infos.city}}</a>',
         {
           closeButton: false,
           autoClose: false,

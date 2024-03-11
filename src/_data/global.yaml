@@ -1,5 +1,5 @@
 ---
-site_origin: https://coworkingmontpellier.org
+site_origin: https://coworkinmontpellier.org
 site_name: Cowork'in Montpellier
 site_punchline: |
   L'espace de coworking
@@ -24,9 +24,9 @@ site_new_description3: |
 infos:
   email: contact@coworkinmontpellier.org
   opening_times: Du lundi au vendredi de 9h à 18h
-  address: |
-    22 rue des Aiguerelles,
-    34000 Montpellier
+  address: 22 rue des Aiguerelles,
+  zip: 34000
+  city: Montpellier
 footer:
   section_one_title: Association loi 1901
   section_one_links:
