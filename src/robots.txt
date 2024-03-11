@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /hostspot.html
+Disallow: /files/
+Noindex: /files/
+
+Sitemap: https://coworkinmontpellier.org/sitemap.xml

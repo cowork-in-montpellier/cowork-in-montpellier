@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
       <div class="lg:col-span-2">
-        <div class="text-white text-3xl mb-4 font-display">{{ global.site_name }}</div>
+        <a href="/" class="block text-white text-3xl mb-4 font-display">{{ global.site_name }}</a>
         <div class="mb-4">{{ global.infos.opening_times | markdown | safe }}</div>
         <div>{{ global.infos.address | doubleLine | markdown | safe }}</div>
       </div>
@@ -11,7 +11,7 @@
           {{ global.footer.section_one_title }}
         </div>
         {% for item in global.footer.section_one_links %}
-        <a href="{{ item.url }}" class="block mb-4 hover:text-white">{{ item.text }}</a>
+        <a href="{{ item.url }}" class="block mb-4 transition-colors hover:text-white">{{ item.text }}</a>
         {% endfor %}
       </div>
       <div>
@@ -20,7 +20,7 @@
         </div>
         <div class="flex space-x-8 justify-center lg:justify-start">
           {% for item in global.footer.section_two_links %}
-          <a href="{{ item.url }}" class="text-4xl hover:text-white" target="_blank">
+          <a href="{{ item.url }}" class="text-4xl transition-colors hover:text-white" target="_blank">
             <span class="fa-brands fa-{{item.icon}}"></span>
           </a>
           {% endfor %}

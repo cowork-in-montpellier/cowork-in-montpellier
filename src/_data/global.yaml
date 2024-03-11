@@ -1,4 +1,5 @@
 ---
+site_origin: https://coworkingmontpellier.org
 site_name: Cowork'in Montpellier
 site_punchline: |
   L'espace de coworking
@@ -6,7 +7,7 @@ site_mid_punchline: associatif
 site_sub_punchline: où il fait bon travailler
 site_description: |
   Cowork'in Montpellier est un **espace de travail partagé** situé **à deux pas de la gare** géré par une structure [associative](./asso.html).
-logo: ./images/logo-coworkin-montpellier-inverted.png
+logo: /images/logo-coworkin-montpellier-inverted.png
 site_new_description: |
   Cowork'in Montpellier est un **espace de travail partagé** [associatif](./asso.html), entièrement géré par les coworkers eux-mêmes.
 
@@ -32,9 +33,9 @@ footer:
     - text: À propos
       url: "./asso.html"
     - text: Statuts
-      url: "./statuts-coworkin-montpellier.pdf"
+      url: "./files/statuts-coworkin-montpellier.pdf"
     - text: Règlement
-      url: "./reglement-coworkin-montpellier.pdf"
+      url: "./files/reglement-coworkin-montpellier.pdf"
   section_two_title: Retrouve-nous sur les réseaux
   section_two_links:
     - icon: facebook
