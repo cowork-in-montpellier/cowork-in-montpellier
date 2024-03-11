@@ -4,7 +4,10 @@
       <div class="lg:col-span-2">
         <a href="/" class="block text-white text-3xl mb-4 font-display">{{ global.site_name }}</a>
         <div class="mb-4">{{ global.infos.opening_times | markdown | safe }}</div>
-        <div>{{ global.infos.address | doubleLine | markdown | safe }}</div>
+        <div>
+          {{ global.infos.address }}<br />
+          {{ global.infos.zip }} {{ global.infos.city }}
+        </div>
       </div>
       <div>
         <div class="font-display text-white uppercase text-sm tracking-widest mb-6">
