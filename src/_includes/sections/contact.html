@@ -1,4 +1,4 @@
-<div id="contact" class="py-12 px-6">
+<section id="contact" class="py-12 px-6">
   <h2 class="font-display text-center font-bold text-5xl mb-6">Contact</h2>
   <div class="w-24 h-2 bg-primary mb-8 mx-auto"></div>
   <div class="container mx-auto">
@@ -19,8 +19,9 @@
         >
           <input type="hidden" name="formID" value="30565176832356" />
           <div>
-            <label class="block text-base tracking-tight text-gray-600">Nom</label>
+            <label for="name" class="block text-base tracking-tight text-gray-600">Nom</label>
             <input
+              id="name"
               name="name"
               type="text"
               placeholder="Victor Hugo"
@@ -29,8 +30,9 @@
             />
           </div>
           <div class="mt-6">
-            <label class="block text-base tracking-tight text-gray-600">Email</label>
+            <label for="email" class="block text-base tracking-tight text-gray-600">Email</label>
             <input
+              id="email"
               name="email"
               type="email"
               placeholder="victor@hugo.fr"
@@ -43,8 +45,9 @@
             </p>
           </div>
           <div class="mt-6">
-            <label class="block text-base tracking-tight text-gray-600">Message</label>
+            <label for="message" class="block text-base tracking-tight text-gray-600">Message</label>
             <textarea
+              id="message"
               name="message"
               placeholder="Ce siècle avait deux ans..."
               required
@@ -67,4 +70,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

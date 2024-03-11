@@ -1,4 +1,4 @@
-<div class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80">
+<footer class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80">
   <div class="container mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
       <div class="lg:col-span-2">
@@ -21,11 +21,12 @@
         <div class="flex space-x-8 justify-center lg:justify-start">
           {% for item in global.footer.section_two_links %}
           <a href="{{ item.url }}" class="text-4xl transition-colors hover:text-white" target="_blank">
-            <span class="fa-brands fa-{{item.icon}}"></span>
+            <span class="fa-brands fa-{{item.icon}}" aria-hidden="true"></span>
+            <span class="invisible absolute">Aller sur {{item.icon}}</span>
           </a>
           {% endfor %}
         </div>
       </div>
     </div>
   </div>
-</div>
+</footer>
