@@ -23,9 +23,13 @@
         </div>
         <div class="flex space-x-8 justify-center lg:justify-start">
           {% for item in global.footer.section_two_links %}
-          <a href="{{ item.url }}" class="text-4xl transition-colors hover:text-white" target="_blank">
+          <a
+            href="{{ item.url }}"
+            class="text-4xl transition-colors hover:text-white"
+            target="_blank"
+            aria-label="Aller sur {{item.icon}}"
+          >
             <span class="fa-brands fa-{{item.icon}}" aria-hidden="true"></span>
-            <span class="invisible absolute">Aller sur {{item.icon}}</span>
           </a>
           {% endfor %}
         </div>
