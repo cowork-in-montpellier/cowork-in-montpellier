@@ -12,15 +12,16 @@
 </div>
 <link rel="stylesheet" type="text/css" href="/curtain.css" />
 <script>
-  const $body = document.querySelector("body");
-  const maybeOpenCurtain = () => {
-    if ($body.classList.contains("open-curtain")) return;
-    if (document.visibilityState === "visible") {
-      setTimeout(function () {
+  if (!window.maybeOpenCurtain) {
+    window.maybeOpenCurtain = () => {
+      const $body = document.querySelector("body");
+      if (document.visibilityState === "visible") {
         $body.classList.add("open-curtain");
-      }, 1000);
-    }
-  };
-  maybeOpenCurtain();
-  document.addEventListener("visibilitychange", maybeOpenCurtain);
+      }
+    };
+    setTimeout(function () {
+      window.maybeOpenCurtain();
+    }, 1000);
+    document.addEventListener("visibilitychange", window.maybeOpenCurtain);
+  }
 </script>

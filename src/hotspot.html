@@ -5,8 +5,69 @@ eleventyExcludeFromCollections: true
 with_curtain: true
 ---
 
-<div class="text-center py-12 mb-12 px-6">
-  <h1 class="text-3xl lg:text-4xl mb-6 font-display text-black leading-tight">Le grand Internet s'ouvre à toi !</h1>
-  <p class="max-w-lg mx-auto">Bonne chance</p>
-  <img src="./images/lamacorne.png" class="mx-auto mt-10" />
+{% import "./macros/modal.njk" as modal %}
+
+<div class="py-12 mb-12 px-6">
+  <h1 class="text-center text-3xl lg:text-4xl mb-10 font-display text-black leading-tight">
+    Le grand Internet s'ouvre à toi !
+  </h1>
+  <p class="text-center">Difficile de se mettre au travail ? Nous t'invitons à :</p>
+  <ol>
+    <li>
+      <label>
+        <input type="checkbox" class="mr-2" /> Saluer le grand
+        <button x-data @click="$dispatch('modal-open', {id: 'lamacorne'})" class="underline">lamacorne</button>, notre
+        protecteur et bienfaiteur
+      </label>
+    </li>
+    <li>
+      <label
+        ><input type="checkbox" class="mr-2" /> Nous rejoindre sur
+        <a href="https://coworkinmtp.slack.com" target="_blank">Slack</a> si ça n'est pas déjà fait</label
+      >
+    </li>
+    <li>
+      <label>
+        <input type="checkbox" class="mr-2" />
+        Faire le <a href="https://sutom.nocle.fr" target="_blank">SUTOM</a> du jour (et partager ton score dans le canal
+        <a href="https://coworkinmtp.slack.com/archives/C05QCTM8VP0" target="_blank">#sutom-et-autres</a>)
+      </label>
+    </li>
+    <li>
+      <label x-data>
+        <input type="checkbox" class="mr-2" />
+        <span x-show="new Date().getHours() < 14">
+          Réfléchir à ce que tu pourrais bien manger ce midi et en discuter sur le canal
+          <a href="https://coworkinmtp.slack.com/archives/C1NJ9F013" target="_blank">#bouffe</a> (disponible à partir de
+          9h07)
+        </span>
+        <span x-show="new Date().getHours() > 14">
+          Aller acheter des bières pour l'apéro et
+          <a href="https://coworkinmtp.slack.com/archives/CA9138ZC1" target="_blank">informer</a> les collègues qu'ils
+          vont bientôt devoir s'arrêter de travailler
+        </span>
+      </label>
+    </li>
+    <li>
+      <label class="font-black">
+        <input type="checkbox" class="mr-2" /> T'impliquer dans la vie du lieu.
+        <button
+          x-data
+          @click="$dispatch('modal-open', {id: 'contribute'})"
+          class="text-white bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-4 py-2 text-center ml-2"
+        >
+          Que puis-je faire ?
+        </button>
+      </label>
+    </li>
+  </ol>
+  <h2 class="text-center text-3xl lg:text-4xl mt-10 mb-0 font-display text-black leading-tight">Happy coworking!</h2>
 </div>
+
+<!-- prettier-ignore -->
+
+{% set lamacorneModalContent %}
+<h1 class="text-center">« Salut à toi, noble coworker ! »</h1>
+<img src="./images/lamacorne.png" class="mx-auto mb-0" />
+{% endset %} {{ modal.modal('lamacorne', lamacorneModalContent) }} {% set contributeModalContent %} {{
+hotspot.modals.contribute | markdown | safe }} {% endset %} {{ modal.modal('contribute', contributeModalContent) }}
