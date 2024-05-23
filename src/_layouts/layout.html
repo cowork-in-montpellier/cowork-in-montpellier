@@ -121,7 +121,7 @@
     </script>
   </head>
   <body class="font-sans text-gray-700 antialiased bg-white">
-    {% if not has_menu %}
+    {% if with_curtain %} {% include '../_includes/curtain.html' %} {% endif %} {% if not has_menu %}
     <a href="/">
       <img src="{{ global.logo }}" class="h-48 w-48 rounded-full object-contain object-center mx-auto mt-8" />
     </a>
