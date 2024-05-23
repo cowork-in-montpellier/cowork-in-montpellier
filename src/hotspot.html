@@ -7,7 +7,7 @@ with_curtain: true
 
 {% import "./macros/modal.njk" as modal %}
 
-<div class="py-12 mb-12 px-6">
+<div class="py-12 mb-12 px-6 text-xl">
   <h1 class="text-center text-3xl lg:text-4xl mb-10 font-display text-black leading-tight">
     Le grand Internet s'ouvre à toi !
   </h1>
@@ -38,29 +38,28 @@ with_curtain: true
         <input type="checkbox" class="mr-2" />
         <span x-show="new Date().getHours() < 14">
           Réfléchir à ce que tu pourrais bien manger ce midi et en discuter sur le canal
-          <a href="https://coworkinmtp.slack.com/archives/C1NJ9F013" target="_blank">#bouffe</a> (disponible à partir de
-          9h07)
+          <a href="https://coworkinmtp.slack.com/archives/C1NJ9F013" target="_blank">#bouffe</a> dès 9h07 😁
         </span>
         <span x-show="new Date().getHours() > 14">
           Aller acheter des bières pour l'apéro et
           <a href="https://coworkinmtp.slack.com/archives/CA9138ZC1" target="_blank">informer</a> les collègues qu'ils
-          vont bientôt devoir s'arrêter de travailler
+          vont bientôt devoir s'arrêter de travailler 😁
         </span>
       </label>
     </li>
     <li>
-      <label class="font-black">
-        <input type="checkbox" class="mr-2" /> T'impliquer dans la vie du lieu.
-        <button
-          x-data
-          @click="$dispatch('modal-open', {id: 'contribute'})"
-          class="text-white bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-4 py-2 text-center ml-2"
-        >
-          Que puis-je faire ?
-        </button>
-      </label>
+      <label class="font-black"> <input type="checkbox" class="mr-2" /> T'impliquer dans la vie du lieu. </label>
     </li>
   </ol>
+  <p class="text-center">
+    <button
+      x-data
+      @click="$dispatch('modal-open', {id: 'contribute'})"
+      class="text-white bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-4 py-2 text-center ml-2"
+    >
+      Que puis-je faire ?
+    </button>
+  </p>
   <h2 class="text-center text-3xl lg:text-4xl mt-10 mb-0 font-display text-black leading-tight">Happy coworking!</h2>
 </div>
 
