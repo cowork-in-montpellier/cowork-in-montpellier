@@ -1,163 +1,26 @@
-<div class="curtainBody">
-  <div id="leftCurtain" class="curtainContainer">
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
+<div class="curtain-wrapper">
+  <div class="curtain left">
+    {% for i in range(0, 12) -%}
+    <div class="fold"></div>
+    {%- endfor %}
   </div>
-  <div id="rightCurtain" class="curtainContainer">
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
-    <div class="unCurtain"></div>
+  <div class="curtain right">
+    {% for i in range(0, 12) -%}
+    <div class="fold"></div>
+    {%- endfor %}
   </div>
-  <div class="overlay"></div>
 </div>
-<style lang="scss">
-  .curtainContainer {
-    --color: #dd3232;
-    --darker: #911818;
-    --lighter: #ec8989;
-    position: absolute;
-    display: flex;
-    top: -10%;
-    width: 100%;
-    height: 110%;
-    margin: auto;
-    transform-style: preserve-3d;
-    overflow: hidden;
-    transition: transform 6s ease;
-  }
-
-  .curtainContainer:nth-child(1) {
-    transform-origin: -120% top;
-    justify-content: flex-start;
-    transform: translatex(-5vw);
-  }
-  .curtainContainer:nth-child(2) {
-    transform-origin: 120% top;
-    justify-content: flex-end;
-    transform: translatex(15vw);
-  }
-
-  .rollLeft {
-    transform: translatex(-150vw) scaleX(0);
-  }
-  .rollRight {
-    transform: translatex(150vw) scaleX(0);
-  }
-
-  .curtainBody:hover .curtainContainer:nth-child(1) {
-    transform: translatex(-150vw) scaleX(0);
-  }
-  .curtainBody:hover .curtainContainer:nth-child(2) {
-    transform: translatex(150vw) scaleX(0);
-  }
-
-  .unCurtain {
-    display: inline-block;
-    width: 15vw;
-    margin: 0;
-    padding: 0;
-    height: 120vh;
-    background-size: 100% 100%;
-    background: repeating-linear-gradient(to left, var(--color) 4vw, var(--darker) 12vw, var(--lighter) 15vw);
-    transform-origin: 0 0%;
-    transform: rotate(3deg);
-    transition: transform 4s ease;
-    animation: swing 2s ease infinite;
-  }
-
-  @keyframes swing {
-    50% {
-      transform: rotate(-3deg);
+<link rel="stylesheet" type="text/css" href="/curtain.css" />
+<script>
+  const $body = document.querySelector("body");
+  const maybeOpenCurtain = () => {
+    if ($body.classList.contains("open-curtain")) return;
+    if (document.visibilityState === "visible") {
+      setTimeout(function () {
+        $body.classList.add("open-curtain");
+      }, 1000);
     }
-  }
-
-  .unCurtain:nth-child(2) {
-    margin-left: -10vw;
-    animation-delay: -0.1s;
-  }
-  .unCurtain:nth-child(3) {
-    margin-left: -10vw;
-    animation-delay: -0.2s;
-  }
-  .unCurtain:nth-child(4) {
-    margin-left: -10vw;
-    animation-delay: -0.3s;
-  }
-  .unCurtain:nth-child(5) {
-    margin-left: -10vw;
-    animation-delay: -0.4s;
-  }
-  .unCurtain:nth-child(6) {
-    margin-left: -10vw;
-    animation-delay: -0.5s;
-  }
-
-  .unCurtain:nth-child(7) {
-    margin-left: -10vw;
-    animation-delay: -0.6s;
-  }
-  .unCurtain:nth-child(8) {
-    margin-left: -10vw;
-    animation-delay: -0.7s;
-  }
-  .unCurtain:nth-child(9) {
-    margin-left: -10vw;
-    animation-delay: -0.8s;
-  }
-  .unCurtain:nth-child(10) {
-    margin-left: -10vw;
-    animation-delay: -0.9s;
-  }
-  .unCurtain:nth-child(11) {
-    margin-left: -10vw;
-    animation-delay: -1s;
-  }
-  .unCurtain:nth-child(12) {
-    width: 10vw;
-    background: repeating-linear-gradient(to left, var(--color) 4vw, var(--darker) 8vw, var(--lighter) 10vw);
-    margin-left: -10vw;
-    animation-delay: -1.1s;
-  }
-
-  .curtainBody {
-    display: block;
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-  }
-
-  .overlay {
-    display: block;
-    position: absolute;
-    color: white;
-    top: 0%;
-    left: 0%;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, rgb(0, 0, 0) 100vh);
-    transition: opacity 3s ease;
-  }
-
-  .curtainBody:hover .overlay {
-    opacity: 0;
-  }
-</style>
+  };
+  maybeOpenCurtain();
+  document.addEventListener("visibilitychange", maybeOpenCurtain);
+</script>

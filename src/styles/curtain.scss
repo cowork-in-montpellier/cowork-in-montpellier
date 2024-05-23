@@ -1,0 +1,83 @@
+$color: #35a8e0;
+
+@keyframes swing {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+body:not(.open-curtain) {
+  overflow-y: hidden;
+}
+
+.curtain-wrapper {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow-x: hidden;
+
+  .curtain {
+    position: absolute;
+    display: flex;
+    top: -10%;
+    width: 100%;
+    height: 110%;
+    margin: auto;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: transform 6s ease;
+    &.left {
+      transform-origin: -120% top;
+      justify-content: flex-start;
+      transform: translatex(-5vw);
+
+      body.open-curtain & {
+        transform: translatex(-150vw) scaleX(0);
+      }
+    }
+    &.right {
+      transform-origin: 120% top;
+      justify-content: flex-end;
+      transform: translatex(15vw);
+      body.open-curtain & {
+        transform: translatex(150vw) scaleX(0);
+      }
+    }
+    .fold {
+      display: inline-block;
+      width: 15vw;
+      margin: 0;
+      padding: 0;
+      height: 120vh;
+      background-size: 100% 100%;
+      background: repeating-linear-gradient(to left, $color 4vw, darken($color, 20%) 12vw, lighten($color, 20%) 15vw);
+      transform-origin: 0 0%;
+      transform: rotate(3deg);
+      transition: transform 4s ease;
+      animation: swing 2s ease infinite;
+
+      @for $i from 2 through 12 {
+        &:nth-child(#{$i}) {
+          margin-left: -10vw;
+          animation-delay: #{-1 * 0.1 * $i}s;
+        }
+      }
+      &:nth-child(12) {
+        width: 10vw;
+        background: repeating-linear-gradient(to left, $color 4vw, darken($color, 20%) 8vw, lighten($color, 20%) 10vw);
+      }
+    }
+  }
+  &:after {
+    // content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, rgb(0, 0, 0) 100vh);
+    transition: opacity 3s ease;
+    opacity: 0.3;
+    body.open-curtain & {
+      opacity: 0;
+    }
+  }
+}
