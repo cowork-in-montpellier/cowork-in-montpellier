@@ -1,11 +1,11 @@
-<nav class="h-24 z-[2000] relative container mx-auto px-6 grid grid-cols-3">
-  <div x-data="{showMenu: false}" class="flex items-center">
+<nav>
+  <div x-data="{showMenu: false}">
     <button
       x-on:click="showMenu = true"
-      class="fixed text-primary bg-white shadow top-0 right-0 mt-8 mr-6 rounded-full w-12 h-12 leading-none text-2xl"
+      class="absolute z-[11] text-primary bg-white shadow top-8 right-6 rounded-full w-12 h-12 leading-none text-2xl"
     >
       <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      <span class="invisible absolute">Afficher le menu</span>
+      <span class="invisible absolute right-0">Afficher le menu</span>
     </button>
 
     <div
@@ -39,9 +39,6 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
     </div>
   </div>
 </nav>
-
-<div class="w-full h-24 bg-white absolute top-0 left-0"></div>

@@ -1,19 +1,7 @@
-<section class="relative w-full py-12 px-12 bg-primary">
-  <div class="text-center md:py-12">
-    <h3 class="text-white text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-display font-bold mb-8">
-      Travailler à Cowork'in Montpellier
-    </h3>
-    <p class="text-white text-base md:text-lg font-thin">
-      Aucune réservation n'est obligatoire et on y trouve toujours une place.
-    </p>
-    <p>
-      <a
-        href="#directions"
-        class="inline-block bg-white rounded-full text-primary uppercase text-sm tracking-widest font-heading px-8 py-4 mt-8"
-      >
-        Comment venir
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-      </a>
-    </p>
+{% if banner.message %}
+<section class="relative w-full p-4 bg-primary">
+  <div class="container">
+    <div class="prose max-w-full">{{ banner.message | markdown | safe}}</div>
   </div>
 </section>
+{% endif %}
