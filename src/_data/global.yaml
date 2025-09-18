@@ -6,26 +6,26 @@ site_punchline: |
 site_mid_punchline: associatif
 site_sub_punchline: où il fait bon travailler
 site_description: |
-  Cowork'in Montpellier est un **espace de travail partagé** situé **à deux pas de la gare** géré par une structure [associative](./asso.html).
+  Cowork'in Montpellier est un **espace de travail partagé** situé dans le quartier des Beaux-Arts, géré par une structure [associative](./asso.html).
 logo: /images/logo-coworkin-montpellier-inverted.png
 site_new_description: |
   Cowork'in Montpellier est un **espace de travail partagé** [associatif](./asso.html), entièrement géré par les coworkers eux-mêmes.
 
-  Il est situé au centre-ville de Montpellier, **à deux pas de la gare** et trois de l'Écusson.
+  Il est situé dans le quartier des Beaux-Arts à Montpellier, au bord du Verdanson et au pied de l'Écusson.
 
   On y trouve des **bureaux partagés** en semi-open space, pour travailler dans la bonne humeur.
 site_new_description2: |
-  Liberté, égalité, flexibilité. Cowork'in Montpellier propose des bureaux à louer sans **aucune forme d’engagement**.
+  Liberté, égalité, flexibilité : les formules de Cowork'in Montpellier sont proposées sans **aucune forme d’engagement**.
 
-  Les bureaux sont **nomades** et chacun est libre de venir **à la journée** comme en **abonnement mensuel**,
+  Tous les postes de travail sont **nomades** et chacun est libre de venir **à la journée** comme en **abonnement mensuel**,
   au gré de son activité, de son budget, ou simplement de son envie !
 site_new_description3: |
-  Un **rendez-vous incontournable** pour les micro-entrepreneurs, freelances et télétravailleurs salariés, nomades ou autres.
+  Un **rendez-vous incontournable** pour les freelances et télétravailleurs salariés, nomades ou sédentaires, de passage ou habitués.
 infos:
   email: contact@coworkinmontpellier.org
   opening_times: Du lundi au vendredi de 9h à 18h
-  address: 22 rue des Aiguerelles,
-  zip: 34000
+  address: 7 rue de Villefranche,
+  zip: 34090
   city: Montpellier
 footer:
   section_one_title: Association loi 1901

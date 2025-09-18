@@ -13,25 +13,26 @@ nav:
     url: "#directions"
   - text: Contact
     url: "#contact"
-cover: https://unsplash.com/photos/yFbyvpEGHFQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTgyfHxjb3dvcmtpbmd8ZnJ8MHx8fHwxNzAxMzU3NDIzfDA&force=true&w=1920
-# cover: ./images/banner.jpg
+cover: /images/terrasse-cover.jpeg
 photos:
-  - src: /images/salle-principale.jpg
-    caption: La salle principale
-  - src: /images/salle-principale-2.jpg
-    caption: Tous les bureaux sont partagés
-  - src: /images/cuisine.jpg
-    caption: La cuisine
-  - src: /images/repas-convivial.jpg
-    caption: Les repas sont plus conviviaux qu'équilibrés ! 😋
-  - src: /images/salle-d-appel.jpg
-    caption: Une salle d'appel
-  - src: /images/salle-de-pause.jpg
-    caption: La salle de pause/sieste
-  - src: /images/terrasse.jpg
-    caption: La terrasse
-  - src: /images/parking-velo.jpg
-    caption: Le parking à vélo
+  - src: /images/facade.jpeg
+    caption: La façade du bâtiment
+  - src: /images/plaque.jpeg
+    caption: Il faut sonner avant d'entrer
+  - src: /images/entree.jpeg
+    caption: Bienvenue dans nos nouveaux locaux !
+  - src: /images/bureau-avocat.jpeg
+    caption: Le bureau de l'avocat
+  - src: /images/bureau-associe.jpeg
+    caption: Le bureau de l'associé
+  - src: /images/bureau-secretaire.jpeg
+    caption: Le bureau de la secrétaire
+  - src: /images/cuisine.jpeg
+    caption: Une grande cuisine pour faire des pauses
+  - src: /images/terrasse.jpeg
+    caption: La terrasse immense
+  - src: /images/terrasse-cover.jpeg
+    caption: Encore la terrasse tellement on en est fier
   - src: /images/sortie-plage.jpeg
     caption: Une sortie plage
   - src: /images/fete-noel.jpg
@@ -43,25 +44,26 @@ photos:
 services:
   - icon: plug
     title: Des bureaux
-    description: 18 postes, nomades, dans des pièces partagées
+    description: 18 postes, nomades, dans 3 bureaux partagés
   - icon: wifi
     title: Une connexion stable
     description: Parce qu'un coworking sans wifi, c'est comme un jour de printemps sans soleil...
   - icon: phone-volume
     title: 3 salles d'appel
     description: Qui dit travail à distance dit probablement quelques appels à passer, non ?
+    coming_soon: true
   - icon: display
     title: Des écrans en libre-service
     description: Pour se prendre pour un trader... ou pas !
   - icon: mug-hot
     title: Thé & café à volonté
     description: Parce que la caféine c'est la vie
+  - icon: building-columns
+    title: Des locaux tout neufs
+    description: Ancien bureau d'avocat, ils ne manquent pas de cachet !
   - icon: sun
-    title: Une grande terrasse
-    description: Le meilleur de la convivialité, 6 mois de l'année
-  - icon: bicycle
-    title: Un parking à vélo
-    description: Une cour isolée en contrebas rien que pour les vélos des coworkers
+    title: Une terrasse gigantesque
+    description: Si vous en trouvez plus grande ailleurs, on s'incline
   - icon: utensils
     title: Une cuisine équipée
     description: Micro-ondes, frigo, et toute la vaisselle qu'il faut
@@ -71,6 +73,7 @@ services:
   - icon: snowflake
     title: Chauffage et clim'
     description: Même si bien sûr, il fait toujours un temps idéal à Montpellier
+    coming_soon: true
   - icon: print
     title: Une imprimante
     description: Multifonction-wifi-laser-couleur-recto-verso à écran tactile intuitif
