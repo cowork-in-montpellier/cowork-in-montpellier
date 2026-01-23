@@ -1,28 +1,20 @@
 title: Participer à la vie du coworking
 subtitle: Notre fonctionnement est associatif, pour t'impliquer, n'hésite pas à rejoindre une ou plusieurs commissions.
-
-commissions:
-  - name: "Tout le monde peut participer :"
+commissions_title: Les commissions
+general_tasks:
+  - name: "Tout le monde peut le faire"
     tasks:
       - Lancer/vider le lave vaisselle
       - Ranger la cuisine + frigo le vendredi
       - Sortir les poubelles (cf. affichage)
       - Laver les torchons
 
-  - name: "Et si tu sais faire :"
+  - name: "Niveau expérimenté"
     tasks:
       - Ouvrir/fermer le lieu
       - Accueillir les nouveaux
       - Facturer/générer des vouchers
-
-  - name: Collège
-    members_mini: 5
-    tasks:
-      - Planifier et organiser l'AG
-      - Prendre les décisions hors AG
-      - S'assurer du bon fonctionnement des commissions
-      - Gérer l'organisation du coworking
-
+commissions:
   - name: Commission Finance
     members_mini: 3
     tasks:
@@ -74,9 +66,16 @@ commissions:
     tasks:
       - S'assurer qu'on ne manque pas de fournitures (café, PQ, sopalin, papier + encre imprimante etc.)
       - Passer les commandes quand c'est nécessaire
+  - name: Collège
+    members_mini: 5
+    is_highlight: true
+    tasks:
+      - Planifier et organiser l'AG
+      - Prendre les décisions hors AG
+      - S'assurer du bon fonctionnement des commissions
+      - Gérer l'organisation du coworking
 
 footer_note:
-  text: "PS: si ça n'est pas déjà fait, rejoins-nous sur slack, tu y trouveras de"
-  highlight: nombreuses infos utiles
+  text: "Alors si ça n'est pas déjà fait, rejoins-nous sur Slack !"
   url: https://coworkinmtp.slack.com
   url_text: coworkinmtp.slack.com

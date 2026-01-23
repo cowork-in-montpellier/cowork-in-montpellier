@@ -7,48 +7,59 @@ permalink: commissions.html
 <div class="container mx-auto px-4 py-12">
   <!-- Header -->
   <header class="text-center mb-12">
-    <h1 class="font-display font-bold text-3xl md:text-4xl text-primary mb-4">{{ commissions.title }}</h1>
+    <h1 class="font-display font-bold text-3xl md:text-4xl mb-4">{{ commissions.title }}</h1>
     <p class="text-gray-600 max-w-2xl mx-auto">{{ commissions.subtitle }}</p>
   </header>
 
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {% for general_task in commissions.general_tasks %}
+    <div class="p-6 flex flex-col break-inside-avoid justify-center">
+      <h2 class="font-display font-bold text-2xl text-primary text-center mb-6">{{ general_task.name }}</h2>
+      <ul class="text-gray-700 space-y-1 text-center">
+        {% for task in general_task.tasks %}
+        <li>- {{ task }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h2 class="break-before-page font-display font-bold text-2xl text-center mt-12 mb-6">
+    {{ commissions.commissions_title }}
+  </h2>
   <!-- Commissions Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for commission in commissions.commissions %}
     <div
-      class="{% if commission.members_mini %}border-2 border-primary rounded-lg{% endif %} p-6 flex flex-col break-inside-avoid"
+      class="{% if commission.is_highlight %}md:col-span-2 lg:col-span-3 bg-primary text-white {% endif %} border-2 border-primary rounded-2xl p-6 flex flex-col break-inside-avoid"
     >
       <h2
-        class="font-display font-bold text-xl text-primary text-center mb-6 {% if not commission.members_mini %}italic{% endif %}"
+        class="font-display font-bold text-xl text-center mb-6 {% if commission.is_highlight %}text-white{% elif not commission.members_mini %}italic text-primary{% else %}text-primary{% endif %}"
       >
         {{ commission.name }}
       </h2>
-      <ul class="text-gray-700 space-y-1 flex-grow">
+      <ul
+        class="{% if commission.is_highlight %}text-white md:grid md:grid-cols-2 gap-x-6{% else %}text-gray-700{% endif %} space-y-1 flex-grow"
+      >
         {% for task in commission.tasks %}
         <li>- {{ task }}</li>
         {% endfor %}
       </ul>
-      {% if commission.members_mini %}
-      <div class="flex justify-end items-center mt-6 text-primary text-2xl">
+      <div
+        class="flex justify-end items-center mt-6 {% if commission.is_highlight %}text-white{% else %}text-primary{% endif %} text-2xl"
+      >
         {% for i in range(0, commission.members_mini) %}
         <i class="fa-solid fa-user mx-1"></i>
         {% endfor %}
         <span class="text-xl font-bold">+</span>
       </div>
-      {% else %}
-      <div class="flex justify-end items-center mt-6 text-primary text-2xl">
-        <i class="fa-solid fa-hand-holding-heart"></i>
-      </div>
-      {% endif %}
     </div>
     {% endfor %}
   </div>
 
   <!-- Footer note -->
-  <div class="text-center mt-12 text-gray-600">
-    <p>
-      {{ commissions.footer_note.text }}
-      <strong class="text-primary">{{ commissions.footer_note.highlight }}</strong> :
-    </p>
+  <div class="text-center mt-8 text-gray-600">
+    <p>{{ commissions.footer_note.text }}</p>
     <p class="mt-2">
       <a href="{{ commissions.footer_note.url }}" class="text-primary hover:underline"
         >{{ commissions.footer_note.url_text }}</a
