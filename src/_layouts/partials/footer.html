@@ -1,4 +1,6 @@
-<footer class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80">
+<footer
+  class="bg-gray-900 text-white text-opacity-40 font-semibold uppercase text-xs tracking-widest bg-opacity-80 print:hidden"
+>
   <div class="container mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center lg:text-left py-24">
       <div class="lg:col-span-2">
@@ -17,7 +19,7 @@
         <a href="{{ item.url }}" class="block mb-4 transition-colors hover:text-white">{{ item.text }}</a>
         {% endfor %}
       </div>
-      <div>
+      <!-- <div>
         <div class="font-display text-white uppercase text-sm tracking-widest mb-6">
           {{ global.footer.section_two_title }}
         </div>
@@ -33,7 +35,7 @@
           </a>
           {% endfor %}
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>

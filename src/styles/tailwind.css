@@ -39,3 +39,24 @@ html {
 [x-cloak] {
   display: none;
 }
+
+.prose.markdown strong a,
+.prose.markdown b a {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1.5rem;
+  background-color: #35a8e0;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.prose.markdown strong a:hover,
+.prose.markdown b a:hover {
+  background-color: #2a8fc2;
+  text-decoration: none;
+}

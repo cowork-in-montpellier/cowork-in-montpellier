@@ -1,0 +1,82 @@
+title: Participer à la vie du coworking
+subtitle: Notre fonctionnement est associatif, pour t'impliquer, n'hésite pas à rejoindre une ou plusieurs commissions.
+
+commissions:
+  - name: "Tout le monde peut participer :"
+    tasks:
+      - Lancer/vider le lave vaisselle
+      - Ranger la cuisine + frigo le vendredi
+      - Sortir les poubelles (cf. affichage)
+      - Laver les torchons
+
+  - name: "Et si tu sais faire :"
+    tasks:
+      - Ouvrir/fermer le lieu
+      - Accueillir les nouveaux
+      - Facturer/générer des vouchers
+
+  - name: Collège
+    members_mini: 5
+    tasks:
+      - Planifier et organiser l'AG
+      - Prendre les décisions hors AG
+      - S'assurer du bon fonctionnement des commissions
+      - Gérer l'organisation du coworking
+
+  - name: Commission Finance
+    members_mini: 3
+    tasks:
+      - Payer le loyer
+      - Surveiller le bon équilibre des finances du cowo
+      - Faire le bilan comptable pour l'AG
+      - Centraliser les factures d'achat
+      - Relancer les factures impayées
+      - Rappeler la bonne pratique sur le pointage des factures sur le portail
+
+  - name: Commission informatique
+    members_mini: 2
+    tasks:
+      - Gérer les outils informatiques (site internet, portail de facturation, portail captif/vouchers)
+      - Automatiser des tâches/rappels dans slack et autre
+      - Organiser le Google Drive
+      - Assurer le fonctionnement de l'imprimante
+      - Créer des tutoriels pour prise en main d'outils
+
+  - name: Commission communication
+    members_mini: 3
+    tasks:
+      - Répondre aux emails de contact
+      - Rédiger la newsletter
+      - Gérer le contenu du site vitrine
+      - Mettre en forme les infos utiles pour tout nouvel arrivant
+      - Étoffer l'offre/repenser les nouveaux tarifs
+      - Réfléchir au process d'intégration des nouveaux dans la co-responsabilité
+      - Travailler la com' sur les réseaux sociaux
+      - Faire de la pub pour le coworking ?
+
+  - name: Commission entretien
+    members_mini: 3
+    tasks:
+      - Gérer les échanges avec le prestataire de ménage
+      - Organiser le lavage des torchons
+      - Mettre des fiches explicatives pour la gestion du lieu
+      - Organiser la gestion des poubelles
+      - Frigo
+
+  - name: Commission maintenance
+    members_mini: 3
+    tasks:
+      - Assurer les petits travaux de maintenance régulièrement (plinthes décollées, ampoules cassées, etc.)
+      - Organiser une session de rangement régulièrement
+
+  - name: Commission approvisionnement
+    members_mini: 2
+    tasks:
+      - S'assurer qu'on ne manque pas de fournitures (café, PQ, sopalin, papier + encre imprimante etc.)
+      - Passer les commandes quand c'est nécessaire
+
+footer_note:
+  text: "PS: si ça n'est pas déjà fait, rejoins-nous sur slack, tu y trouveras de"
+  highlight: nombreuses infos utiles
+  url: https://coworkinmtp.slack.com
+  url_text: coworkinmtp.slack.com

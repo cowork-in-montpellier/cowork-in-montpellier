@@ -7,10 +7,8 @@ with_curtain: true
 
 {% import "./macros/modal.njk" as modal %}
 
-<div class="py-12 mb-12 px-6 text-xl">
-  <h1 class="text-center text-3xl lg:text-4xl mb-10 font-display text-black leading-tight">
-    Le grand Internet s'ouvre à toi !
-  </h1>
+<div class="py-12 mb-12 px-6 text-xl prose">
+  <h1 class="text-center text-3xl lg:text-4xl mb-10 font-display leading-tight">Le grand Internet s'ouvre à toi !</h1>
   <p class="text-center">Pas envie de te mettre au travail ? Nous t'invitons à :</p>
   <ol>
     <li>
@@ -52,13 +50,11 @@ with_curtain: true
     </li>
   </ol>
   <p class="text-center">
-    <button
-      x-data
-      @click="$dispatch('modal-open', {id: 'contribute'})"
-      class="text-white bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full px-4 py-2 text-center ml-2"
+    <a
+      href="/commissions.html"
+      class="inline-block bg-primary text-white uppercase text-sm tracking-widest font-heading px-8 py-4 rounded-full"
+      >Que puis-je faire ?</a
     >
-      Que puis-je faire ?
-    </button>
   </p>
   <h2 class="text-center text-3xl lg:text-4xl mt-10 mb-0 font-display text-black leading-tight">Happy coworking!</h2>
 </div>
@@ -68,5 +64,4 @@ with_curtain: true
 {% set lamacorneModalContent %}
 <h1 class="text-center">« Salut à toi, noble coworker ! »</h1>
 <img src="./images/lamacorne.png" class="mx-auto mb-0" />
-{% endset %} {{ modal.modal('lamacorne', lamacorneModalContent) }} {% set contributeModalContent %} {{
-hotspot.modals.contribute | markdown | safe }} {% endset %} {{ modal.modal('contribute', contributeModalContent) }}
+{% endset %} {{ modal.modal('lamacorne', lamacorneModalContent) }}
